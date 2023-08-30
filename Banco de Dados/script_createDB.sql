@@ -31,6 +31,6 @@ create table sensores(
 
 create table fluxo(
 	idFluxo int primary key auto_increment,
-    horarioDia datetime,
+    horarioDia datetime default current_timestamp,
     id_sensor int);
 
