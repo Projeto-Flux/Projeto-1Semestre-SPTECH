@@ -34,3 +34,4 @@ create table fluxo(
     horarioDia datetime default current_timestamp,
     id_sensor int);
 
+
