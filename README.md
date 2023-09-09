@@ -7,9 +7,10 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 
 ## ✅ Protótipo
 <img  src="https://i.imgur.com/e1G4tea.jpg" />
-<img  src="https://i.imgur.com/cCWK0gw.jpg" />
+<img  src="https://i.imgur.com/nv6NaKD.png" />
 <img  src="https://i.imgur.com/3tkYNaA.jpg" />
-<img  src="https://i.imgur.com/oouILBM.jpg" />
+<img  src="https://i.imgur.com/cYzyL47.png" />
+<img  src="https://i.imgur.com/uXKLu0p.png" />
 <img  src="https://i.imgur.com/g3NvYaQ.jpg" />
 <img  src="https://i.imgur.com/qeCH6xr.jpg" />
 
