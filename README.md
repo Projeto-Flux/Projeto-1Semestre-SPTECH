@@ -3,7 +3,7 @@
 </h3>
 
 # Projeto Flux
-Um projeto que tem como objetivo consiste em controlar e gerar o mapeamento estratégico evitando o congestionamento de pessoas, melhorando a distribuição de lojas e consequentemente melhorando a experiência e maximizando a visibilidade do shopping e seus futuros lucros. 
+Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evitando o congestionamento de pessoas, melhorando a distribuição de lojas e consequentemente melhorando a experiência e maximizando a visibilidade do shopping e seus futuros lucros. 
 
 ## ✅ Protótipo
 <img  src="https://i.imgur.com/e1G4tea.jpg" />
