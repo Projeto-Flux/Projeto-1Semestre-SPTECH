@@ -13,13 +13,23 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 <img  src="https://i.imgur.com/g3NvYaQ.jpg" />
 <img  src="https://i.imgur.com/qeCH6xr.jpg" />
 
-<!---
+
 ## 👤 Equipe
 <table>
-<tr>
+
 <td  align="center"><a  href="https://github.com/amandaribeiro1" ><img  style="border-radius: 50%;"  src="https://i.imgur.com/lqb9Avx.jpg"  width="100px;"/><br/><sub><b>Amanda </b></sub></a><br /><a  href="https://github.com/amandaribeiro1" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+</td>
+<td  align="center"><a  href="https://github.com/a" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Antônio </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+</td>
+<td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Carlos <br> Eduardo </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+</td>
+<td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Davi </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+</td>
+<td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Enzo </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+</td>
+<td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Felipe<br>Baamonde </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
 </table>
----!>
+
