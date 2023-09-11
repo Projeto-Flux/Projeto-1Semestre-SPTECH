@@ -26,9 +26,9 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 </td>
 <td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Davi </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
-<td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src="https://i.imgur.com/7mgnart.png"  width="100px;"/><br/><sub><b>Enzo </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/ezpmartins" ><img  style="border-radius: 50%;"  src="https://i.imgur.com/7mgnart.png"  width="100px;"/><br/><sub><b>Enzo </b></sub></a><br /><a  href="https://github.com/ezpmartins" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
-<td  align="center"><a  href="https://github.com/ezpmartins" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Felipe Baamonde </b></sub></a><br /><a  href="https://github.com/ezpmartins" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/" ><img  style="border-radius: 50%;"  src=""  width="100px;"/><br/><sub><b>Felipe Baamonde </b></sub></a><br /><a  href="https://github.com/" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
