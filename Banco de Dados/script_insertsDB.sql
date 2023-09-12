@@ -6,7 +6,6 @@ insert into empresa (nome, cnpj, email, cep, numero) values
 ("Shopping ABC","45678901200001","vendas@lojaabc.com","67890123","234"),
 ("Prestadora 789","78901234500001","contato@prestadora789.org","90123456","567");
 
-select * from usuario;
 
 insert into usuario (NomeUsuario, Email, Senha, Telefone, id_empresa) values 
 ('João Silva', 'joao@email.com', 'senha123', '12945678901', 1000),
@@ -30,7 +29,6 @@ insert into sensores (id_zona, porta) values
 (2, 1), (5, 1);
 
 
-select * from fluxo;
 insert into fluxo (id_sensor) values -- colocando somente o ID, pois ele irá adicionar o horário automatico do pc/server
 (1), (1),
 (3), (5),
