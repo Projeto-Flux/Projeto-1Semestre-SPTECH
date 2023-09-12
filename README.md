@@ -1,5 +1,5 @@
 <h3 align="center">
-  <img src="https://i.imgur.com/CA5GE25.png" alt="Flux Logo" height="85"/>
+  <img src="https://i.imgur.com/vSDlZhu.png" alt="Flux Logo" height="85"/>
 </h3>
 
 # Projeto Flux
