@@ -14,11 +14,11 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 <img  src="https://i.imgur.com/g3NvYaQ.jpg" />
 <img  src="https://i.imgur.com/qeCH6xr.jpg" />
 
-## 🖩 Calculadora
+## 🔢 Calculadora
 A calculadora financeira é uma ferramenta que permite que indivíduos interessados em nosso negócio determinem facilmente o valor de seu investimento e projetem seus potenciais lucros a partir desse investimento.<br>
 Consulte o codigo da nossa calculadora financeira [aqui](https://github.com/Projeto-Flux/Projeto-1Semestre-SPTECH/tree/main/Algoritmo)
 
-## 🖩 Banco de Dados
+## 💾 Banco de Dados
 Consulte nossas tabelas [nesses repositorio.](https://github.com/Projeto-Flux/Projeto-1Semestre-SPTECH/tree/main/Banco%20de%20Dados)
 
 ## 👤 Equipe
