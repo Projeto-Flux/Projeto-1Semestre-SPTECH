@@ -40,11 +40,11 @@ Consulte nossas tabelas [nesses repositorio.](https://github.com/Projeto-Flux/Pr
 </td>
 
 
-<td  align="center"><a  href="https://github.com/Lucas-Oristanio" ><img  src="https://i.imgur.com/7mgnart.png" border-radius="50%";  height="120px"; width="100px;"/><br/><sub><b> Lucas </b></sub></a><br /><a  href="https://github.com/Lucas-Oristanio" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/Lucas-Oristanio" ><img  src="" border-radius="50%";  height="120px"; width="100px;"/><br/><sub><b> Lucas </b></sub></a><br /><a  href="https://github.com/Lucas-Oristanio" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
-<td  align="center"><a  href="https://github.com/NathanCavalcante2004" ><img src="https://i.imgur.com/R8yUX6a.png" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Nathan </b></sub></a><br /><a  href="https://github.com/NathanCavalcante2004" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/NathanCavalcante2004" ><img src="" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Nathan </b></sub></a><br /><a  href="https://github.com/NathanCavalcante2004" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
