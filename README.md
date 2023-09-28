@@ -24,7 +24,7 @@ Consulte nossas tabelas [nesses repositorio.](https://github.com/Projeto-Flux/Pr
 ## 👤 Equipe
 <table>
   
-<td  align="center"><a  href= "https://github.com/ezpmartins"><img src="" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Enzo </b></sub></a><br /><a  href="https://github.com/ezpmartins" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href= "https://github.com/ezpmartins"><img src="https://ibb.co/JQKHxyW" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Enzo </b></sub></a><br /><a  href="https://github.com/ezpmartins" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
