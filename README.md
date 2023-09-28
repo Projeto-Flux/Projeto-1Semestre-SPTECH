@@ -24,27 +24,27 @@ Consulte nossas tabelas [nesses repositorio.](https://github.com/Projeto-Flux/Pr
 ## 👤 Equipe
 <table>
   
-<td  align="center"><a  href= "https://github.com/ezpmartins"><img src="https://imgur.com/RctKuzd" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Enzo </b></sub></a><br /><a  href="https://github.com/ezpmartins" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href= "https://github.com/ezpmartins"><img src="https://i.imgur.com/RctKuzd.png" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Enzo </b></sub></a><br /><a  href="https://github.com/ezpmartins" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
-<td  align="center"><a  href= "https://github.com/Felipe-Baamonde" ><img src=""  border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Felipe </b></sub></a><br /><a  href="https://github.com/Felipe-Baamonde" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href= "https://github.com/Felipe-Baamonde" ><img src="https://i.imgur.com/TYO0q2Z.png"  border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Felipe </b></sub></a><br /><a  href="https://github.com/Felipe-Baamonde" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
-<td  align="center"><a  href="https://github.com/Gabriel-SilvaSPTECH" ><img src="" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Gabriel </b></sub></a><br /><a  href="https://github.com/Gabriel-SilvaSPTECH" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/Gabriel-SilvaSPTECH" ><img src="https://i.imgur.com/frI4jYw.png" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Gabriel </b></sub></a><br /><a  href="https://github.com/Gabriel-SilvaSPTECH" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
-<td  align="center"><a  href="https://github.com/IgorMoura1" ><img src="" border-radius="50%";  height="120px"; width="100px;"/><br/><sub><b> Igor </b></sub></a><br /><a  href="https://github.com/IgorMoura1" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/IgorMoura1" ><img src="https://i.imgur.com/Cy96635.png" border-radius="50%";  height="120px"; width="100px;"/><br/><sub><b> Igor </b></sub></a><br /><a  href="https://github.com/IgorMoura1" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
-<td  align="center"><a  href="https://github.com/Lucas-Oristanio" ><img  src="" border-radius="50%";  height="120px"; width="100px;"/><br/><sub><b> Lucas </b></sub></a><br /><a  href="https://github.com/Lucas-Oristanio" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/Lucas-Oristanio" ><img  src="https://i.imgur.com/FP2pm83.png" border-radius="50%";  height="120px"; width="100px;"/><br/><sub><b> Lucas </b></sub></a><br /><a  href="https://github.com/Lucas-Oristanio" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
-<td  align="center"><a  href="https://github.com/NathanCavalcante2004" ><img src="" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Nathan </b></sub></a><br /><a  href="https://github.com/NathanCavalcante2004" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
+<td  align="center"><a  href="https://github.com/NathanCavalcante2004" ><img src="https://i.imgur.com/ZNFekB6.png" border-radius="50%"; height="120px"; width="100px;"/><br/><sub><b> Nathan </b></sub></a><br /><a  href="https://github.com/NathanCavalcante2004" ><img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"  width="20"/></a>
 </td>
 
 
