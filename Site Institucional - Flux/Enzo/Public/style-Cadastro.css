@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background:#1a3950;
+}
+/* body img{
+    width: 100vw;
+    height: 100vh;   
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;
+} */
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+.card {
+    width: 30%;
+    background-color: #e5e5e5;
+    border-radius:30px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    color:#1a3950;
+}
+.card h2 {
+    margin: 0;
+    font-size: 30px;
+}
+.formulario{
+    display: flex;
+    height: 70%;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formulario span{
+    font-size: 15px;
+    font-weight: 800;
+}
+.formulario input{
+    border: 2px solid  #ccc;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input{
+    flex-direction: start;
+    display: flex;
+    border: 0;
+}
+.card{
+    display: flex;
+    background-color:#fdfdfd;
+}
+.cadastro .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.campo{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    margin: 10px;
+}
+.botao{
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 0;
+    border-radius: 15px;
+    font-weight: 504;
+    font-size: 20px;
+    color: #fdfdfd;
+    background-color:#1a3950;
+    width: 120px;
+    height: 40px;
+}
+.cadastro .botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2,span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
