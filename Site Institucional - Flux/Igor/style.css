@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(-45deg, #ffffff, #f5f5f5, #e6e6e6, #d8d8d8);
+    background-size: 400% 400%;
+    animation: gradient 60s ease infinite;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4%;
+    padding: 20px 100px;
+    background: #354555cc;
+    backdrop-filter: blur 2000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 0px 5px 5px #353535cc;*/
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(20px);
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 80px;
+    height: 80px;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 14px;
+    color: rgb(219, 219, 219);
+    font-weight: 250;
+    text-decoration: none;
+    margin-left: 40px;
+    border-radius: 25%;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: .6s;
+
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+button {
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border: 2px;
+    border-radius: 5px;
+    background-color: #919191;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 15px;
+    line-height: 0.5;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    box-shadow: inset 0 1px 1px 1px hsla(0, 0%, 0%, 0.5);
+}
+
+button:focus {
+    outline: thin;
+    outline: 0.5px auto -webkit-focus-ring-color;
+    outline-offset: -1px;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('Design/mainpage/website/');
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index: 1;
+}
+
+.hero {
+    margin-top: 35px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+    z-index: 2;
+}
+
+.hero img {
+    width: 900px;
+    height: 900px;
+    z-index: 5;
+}
+
+.column-left {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    flex-direction: column;
+    z-index: 5;
+}
+
+.image {
+    z-index: 10;
+}
+
+p {
+    width: 50%;
+    height: 50%;
+}
+
+.social .container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.box {
+    
+
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background-color: rgb(189, 189, 189);
+    z-index: 1000;
+}
+
