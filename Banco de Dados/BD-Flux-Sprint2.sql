@@ -1,6 +1,7 @@
 create database projetoflux;
 use projetoflux;
 
+-- Criando as Tabelas e suas respectivas chaves estrangeiras.
 create table empresa(
 	idEmpresa int primary key auto_increment,
     nome varchar(100),
@@ -9,40 +10,40 @@ create table empresa(
     cep varchar(8),
     numero varchar (10))auto_increment=1000;
 
-create table usuario(
-	idUsuario int primary key auto_increment,
-	NomeUsuario varchar (100) not null,
+create table Funcionario(
+	idFuncionario int primary key auto_increment,
+	nome varchar (100) not null,
 	Email varchar (100) not null,
 	Senha varchar (100) not null,
-	Telefone varchar (11));
+	tipoUsuario char(5),
+    fk_idEmpresa int,
+    constraint FkUsuario foreign key (fk_idEmpresa) references empresa(idEmpresa));
 
 create table zona(
 	idZona int primary key auto_increment,
     nomeZona varchar(30),
     qtdSensores int,
     tamanho int,
-    capacidade int);
+    capacidade int,
+    fk_idEmpresa int,
+    fk_idFuncionario int,
+    constraint FkZona foreign key (fk_idEmpresa) references empresa(idEmpresa),
+    constraint FkFuncionario foreign key (fk_idFuncionario) references Funcionario(idFuncionario));
 
 create table sensores(
 	idSensor int primary key auto_increment,
-    porta int);
+    porta int,
+    fk_idZona int,
+    constraint FkSensor foreign key (fk_idZona) references zona(idZona));
 
 create table fluxo(
 	idFluxo int primary key auto_increment,
-    horarioDia datetime default current_timestamp);
+    horarioDia datetime default current_timestamp,
+    fk_idSensor int,
+    constraint Fkfluxo foreign key (fk_idSensor) references sensores(idSensor));
     
-alter table usuario add column fk_idEmpresa int;
-alter table usuario add constraint fkEmp foreign key (fk_idEmpresa) references empresa(idEmpresa);
-
-alter table zona add column fk_idEmpresa int;
-alter table zona add constraint fkEmp_zona foreign key (fk_idEmpresa) references empresa(idEmpresa);
-
-alter table sensores add column fk_idzona int;
-alter table sensores add constraint fkZona foreign key (fk_idZona) references zona(idZona);
-
-alter table fluxo add column fk_idSensor int;
-alter table fluxo add constraint fkSensor_fluxo foreign key (fk_idSensor) references sensores(idSensor);
-
+    
+-- Inserindo Dados mockados nas tabelas
 insert into empresa (nome, cnpj, email, cep, numero) values 
 ("Empresa A ","12345678900001","empresa.a@email.com","12345678","123"),
 ("Shopping XYZ","98765432100001","contato@comercioxyz.com","87654321","456"),
@@ -78,9 +79,14 @@ insert into fluxo (fk_idSensor) values -- colocando somente o ID, pois ele irá 
 (3), (5),
 (4), (1),
 (3), (2);
-
+    
+-- Realizando o SELECT
 select * from fluxo;
 
 select * from usuario join empresa on fk_idEmpresa = idEmpresa;
 select * from sensores join zona join empresa join fluxo on fk_idzona = idZona and fk_idEmpresa = idEmpresa;
+
+
+
+
 
