@@ -1,0 +1,373 @@
+html {
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif;
+    letter-spacing: 7px; 
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding: 20x 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff15;
+    backdrop-filter: blur(4px);
+}
+.cor1{
+    color: #fff;
+}
+.cor2{
+    color: #1A3850;
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+    
+}
+
+.header .links{
+    width: 500px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.header .links a{
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-bottom: solid 2px transparent;
+    transition: 0.4s;
+}
+
+.header .links a:hover{
+    border-width: 0 100%;
+    border-bottom-color:#fff;
+}
+
+.conteudo{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.conteudo h1{
+    font-size: 90px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif; 
+    letter-spacing: 7px;
+}
+
+.conteudo h4{
+    margin-top: 5px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    color: #FFF;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif; 
+}
+
+.conteudo .btn{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.conteudo .btn:hover{
+    background-color: #ffffff3d;
+}
+.conteudo .icon a{
+    border: none;
+    cursor: pointer;
+}
+
+.back-video{
+    position: absolute; /* Para o video ficar atrás dos outros elementos */
+    width: 100%;
+    bottom: 0;
+    z-index: -1; /* Para o video ficar atrás dos outros elementos */
+}
+
+.icon img{
+    color: #fff;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+/* SOBRE NOS */
+
+.sobre{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(238, 237, 237);
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sobre .col1,.col2{
+    width: 40%;
+    background-color: rgb(230, 230, 230);
+}
+.col1{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+.col1 h2{
+    font-size: 64px;
+    color: #1A3850;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif;  
+    align-items: center;
+    text-shadow: 2px 2px 6px #222;
+}
+
+.col1 span{
+    font-family:'Zen Kaku Gothic New', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2.5px;
+}
+
+.col2{
+    height: 65%;
+    display: flex;
+    justify-content: center;
+}
+.col2 .cont-imagens{
+    width: 100%;
+    height: 100%;
+}
+.linha1{
+    display: flex;
+    height: 50%;
+    width: 100%;
+}
+.linha1 .col{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.l1,.l2{
+    background-color: #222;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+.l1:hover,.l2:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.linha2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #222;
+    transition: 0.5s;
+}
+.linha2:hover{
+    transform: scale(1.1);
+}
+.linha2 .col{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.col2 img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+/* EQUIPE */
+
+.equipe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #1A3850;
+}
+
+.equipe .titulo{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+}
+
+.equipe .titulo h1{
+    font-size: 52px;
+}
+
+.cards{
+    width: 90%;
+    height: 82%;
+    display: flex;
+    /* border: solid 2px black; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cards .col{
+    width: 30%;
+    height: 95%;
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cards .col .p{
+    width: 95%;
+    height: 45%;
+    /* border: solid 2px black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards .col .p img{
+    width: 55%;
+    background-color: #0000007f;
+    border-radius: 50%;
+}
+
+/* Contato */
+
+.contato{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background-color: rgb(238, 237, 237);
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.titulo-contato{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    align-items: center;
+}
+
+.titulo-contato h1{
+    color: #1A3850;
+
+}
+
+.l-contato{
+    display: flex;
+    width: 90%;
+    height: 80%;
+}
+
+.l-contato .card-contato{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.card-contato p{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-contato img{
+    margin-bottom: 20px;
+}
+
+.formulario input,.formulario button{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px; 
+    border: solid #1A3850 2px;  
+    margin-top: 10px;
+}
+.formulario button{
+    background-color: #1A3850;
+    color: #fff;
+}
+
+.formulario button:hover{
+    cursor: pointer;
+}
+.formulario h3{
+    margin-bottom: 15px;
+}
+.formulario a{
+    color: #1A3850;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: #1A3850;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.medias{
+    display: flex;
+    width: 10%;
+    justify-content: space-around;
+    margin-top: 1%;
+}
