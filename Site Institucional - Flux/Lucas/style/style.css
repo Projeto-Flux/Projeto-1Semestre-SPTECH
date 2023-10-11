@@ -222,6 +222,32 @@ h1{
     transition: 0.5s;
 }
 
+/* Calculadora */
+
+.calculadora{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    background-color: rgb(238, 237, 237);
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+.calculadora .calc-titulo{
+    font-size: 32px;
+    color: #1A3850;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Young Serif', serif;  
+    align-items: center;
+    text-shadow: 1px 1px 6px #222;
+}
+.calculadora .container-calculadora{
+    width: 100%;
+    height: 100%;
+    border: solid 2px black;
+    margin: 10px;
+}
 /* EQUIPE */
 
 .equipe{
@@ -284,7 +310,7 @@ h1{
 .contato{
     display: flex;
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background-color: rgb(238, 237, 237);
     justify-content: space-between;
     align-items: center;
@@ -328,12 +354,22 @@ h1{
     margin-bottom: 20px;
 }
 
-.formulario input,.formulario button{
+.formulario .inp-autor,.inp-email,.formulario button{
     width: 250px;
     height: 40px;
     border-radius: 10px; 
     border: solid #1A3850 2px;  
     margin-top: 10px;
+}
+.formulario .inp-assunto{
+    width: 250px;
+    height: 80px;
+    border-radius: 10px; 
+    border: solid #1A3850 2px;  
+    margin-top: 10px;
+}
+.formulario input{
+    padding: 5px;
 }
 .formulario button{
     background-color: #1A3850;
