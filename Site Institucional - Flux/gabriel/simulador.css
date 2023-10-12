@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    background-image: url(shoppings.jpg);   
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* deslocamento-x deslocamento-y raio cor */
+}
+
+.container {
+    font-weight: bolder;
+    color: #dae3ea;
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
