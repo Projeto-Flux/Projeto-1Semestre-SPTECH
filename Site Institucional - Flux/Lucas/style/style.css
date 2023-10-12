@@ -53,7 +53,7 @@ h1{
 }
 
 .header .links{
-    width: 500px;
+    width: 35vw;
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -243,11 +243,61 @@ h1{
     text-shadow: 1px 1px 6px #222;
 }
 .calculadora .container-calculadora{
-    width: 100%;
+    width: 70%;
     height: 100%;
-    border: solid 2px black;
     margin: 10px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.container-calculadora .col1-calc{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.col1-calc span{
+    font-size: 26px;
+}
+.container-calculadora .col1-calc input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: #1A3850 solid 2px;
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 22px;
+}
+.col1-calc button{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px black;
+    background-color: #1A3850;
+    color: #FFF;
+    font-size: 20px;
+    text-shadow: 2px 2px #222;
+}
+.col1-calc button:hover{
+    box-shadow: 2px 2px 6px black;
+    cursor: pointer;
+}
+
+.container-calculadora .col2-calc{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 60%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+.col2-calc span{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: black;
+    padding: 5px;
 }
 /* EQUIPE */
 
@@ -371,6 +421,7 @@ h1{
 }
 .formulario input{
     padding: 5px;
+    font-size: 16px;
 }
 .formulario button{
     background-color: #1A3850;
@@ -387,6 +438,12 @@ h1{
     color: #1A3850;
     font-size: 18px;
     text-decoration: none;
+}
+
+textarea{
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
 }
 
 /* Footer */

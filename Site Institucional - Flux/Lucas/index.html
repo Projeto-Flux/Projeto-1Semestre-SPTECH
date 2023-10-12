@@ -30,6 +30,7 @@
             <div class="links">
                 <li><a class="cor1" href="#home">HOME</a></li>
                 <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+                <li><a class="cor1" href="#calculadora">SIMULE AQUI</a></li>
                 <li><a class="cor1" href="#equipe">EQUIPE</a></li>
                 <li><a class="cor1" href="#contato">CONTATO</a></li>
             </div>
@@ -76,16 +77,22 @@
         </div>
     </div>
 
-    <div class="calculadora">
+    <div class="calculadora" id="calculadora">
         <div class="calc-titulo">
             <h2>Simule um investimento</h2>
         </div>
         <div class="container-calculadora">
             <div class="col1-calc">
-
+                <span>Área do shopping (m²)</span>
+                <input id="input_area" type="number">
+                <span>Aluguel médio das lojas</span>
+                <input id="input_aluguel" type="number">
+                <span>Quantidade de lojas</span>
+                <input id="input_qtdLoja" type="number">
+                <button onclick="simularInvestimento()">Simular investimento</button>
             </div>
-            <div class="col2-calc">
-                
+            <div class="col2-calc" id="estiloMensagem">
+                <div id="res"></div>
             </div>
         </div>
     </div>
@@ -142,7 +149,8 @@
                 <h3>Entre em contato!</h3>
                 <input type="text" class="inp-autor" placeholder="Autor">
                 <input type="text" class="inp-email" placeholder="Email">
-                <input type="text" class="inp-assunto" placeholder="Assunto">
+                <!-- <input type="text" class="inp-assunto" placeholder="Assunto"> -->
+                <textarea class="inp-assunto" id="" cols="30" rows="10"></textarea>
                 <button>Enviar</button> <br>
                 Ou se preferir
                 <a href="#">contato@flux.com</a>
@@ -185,6 +193,7 @@
                                 <div class="links">
                                     <li><a class="cor1" href="#home">HOME</a></li>
                                     <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor1" href="#calculadora">SIMULE AQUI</a></li>
                                     <li><a class="cor1" href="#equipe">EQUIPE</a></li>
                                     <li><a class="cor1" href="#contato">CONTATO</a></li>
                                 </div>
@@ -198,6 +207,7 @@
                                 <div class="links">
                                     <li><a class="cor2" href="#home">HOME</a></li>
                                     <li><a class="cor2" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor2" href="#calculadora">SIMULE AQUI</a></li>
                                     <li><a class="cor2" href="#equipe">EQUIPE</a></li>
                                     <li><a class="cor2" href="#contato">CONTATO</a></li>
                                 </div>
@@ -211,6 +221,7 @@
                                 <div class="links">
                                     <li><a class="cor1" href="#home">HOME</a></li>
                                     <li><a class="cor1" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor1" href="#calculadora">SIMULE AQUI</a></li>
                                     <li><a class="cor1" href="#equipe">EQUIPE</a></li>
                                     <li><a class="cor1" href="#contato">CONTATO</a></li>
                                 </div>
@@ -224,10 +235,64 @@
                                 <div class="links">
                                     <li><a class="cor2" href="#home">HOME</a></li>
                                     <li><a class="cor2" href="#sobre">SOBRE NÓS</a></li>
+                                    <li><a class="cor2" href="#calculadora">SIMULE AQUI</a></li>
                                     <li><a class="cor2" href="#equipe">EQUIPE</a></li>
                                     <li><a class="cor2" href="#contato">CONTATO</a></li>
                                 </div>
                         `
         }
     });
+
+    function simularInvestimento(){
+        var area = Number(input_area.value);
+        var aluguel = Number(input_aluguel.value);
+        var qtdLojas = Number(input_qtdLoja.value);
+
+        var tamanhoAreaUtil = (area * 0.25) * 1000;// apenas 25% de um shopping é área util para instalar os sensores 
+        var sensores; // quantidade de sensores
+        var custo; // custo da nossa instalação + disponibilidade do serviço 
+        var lucroTotal = aluguel * qtdLojas; // lucro do shopping 
+
+        if(area < 10){
+            sensores = tamanhoAreaUtil / 2;
+        }else if(area < 20){
+            sensores = tamanhoAreaUtil / 2.1;
+        }else if(area < 30){
+            sensores = tamanhoAreaUtil / 2.2;
+        }else if(area < 40){
+            sensores = tamanhoAreaUtil / 2.3;
+        }else if(area < 50){
+            sensores = tamanhoAreaUtil / 2.4;
+        }else if(area < 60){
+            sensores = tamanhoAreaUtil / 2.5;
+        }else if(area < 70){
+            sensores = tamanhoAreaUtil / 2.6;
+        }else if(area <= 100){
+            sensores = tamanhoAreaUtil / 3;
+        }else {
+            sensores = tamanhoAreaUtil / 3.2;
+        }
+        
+        custo = (sensores*100);
+        var maoDeObra = custo * 0.5;
+
+        var retorno = (custo+maoDeObra) / (lucroTotal * 0.13);
+
+        sensores = sensores.toFixed(0);
+
+        res.innerHTML = `<span>
+            Seriam necessários ${sensores} sensores para cobrir seu shopping com uma ótima qualidade.<br>
+            Com base em nossa simulação acreditamos que você ganha cerca de R$${lucroTotal} apenas com os alugueis, com a implementação do nosso sistema você conseguiria reduzir 13% de seus clientes que desistem das compras, podendo chegar até R$${lucroTotal * 0.13} de ganho a mais com os alugueis mensais.<br>
+            Tendo um  investimento inicial de instalação de apenas R$${(maoDeObra + custo).toFixed(0)}. Você poderá esperar um retorno em aproximadamente ${retorno.toFixed(0)} meses.<br>
+            Além do ganho de uma melhor experiencia aos seu clientes, maior lucro aos lojistas e uma melhora na reputação de seu shopping.
+            </span>`;
+    
+            estiloMensagem.style.backgroundColor = "#6085a3a3";
+            estiloMensagem.style.padding = "10px";
+            estiloMensagem.style.borderRadius = "10px 0 10px 0" ;
+
+        }
+
+        
+
     </script>
