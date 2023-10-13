@@ -465,3 +465,72 @@ textarea{
     justify-content: space-around;
     margin-top: 1%;
 }
+
+/* Login */
+
+.body-login{
+    background-color: #d7d7d7;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.container-login{
+    width: 70%;
+    height: 65%;
+    background-color: #fff;
+    border: #1A3850 solid 12px;
+    box-shadow: #1A3850 4px 4px 12px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container-login .col1-login{
+    width: 30%;
+    height: 70%;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario-login span{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+}
+.formulario-login input{
+    width: 200px;
+    height: 30px;
+    font-size: 22px;
+    outline: none;
+    margin-bottom: 10px;
+}
+.formulario-login input:hover,input:focus{
+    border: solid 2px #1A3850;
+}
+.formulario-login button{
+    width: 200px;
+    height: 30px;
+    font-size: 22px;
+    background-color: #1A3850;
+    color: #fff;
+    border: solid 2px black;
+    cursor: pointer;
+}
+.container-login .col2-login{
+    width: 55%;
+    height: 60%;
+}
+.col2-login img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px 5px 30px 10px;
+}
