@@ -479,7 +479,7 @@ textarea{
 .container-login{
     width: 70%;
     height: 65%;
-    background-color: #fff;
+    background-color: #1A3850;
     border: #1A3850 solid 12px;
     box-shadow: #1A3850 4px 4px 12px;
     display: flex;
@@ -489,11 +489,11 @@ textarea{
 .container-login .col1-login{
     width: 30%;
     height: 70%;
-    border: solid 2px black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #fff;
 }
 .formulario-login{
     display: flex;
@@ -509,9 +509,10 @@ textarea{
 .formulario-login input{
     width: 200px;
     height: 30px;
-    font-size: 22px;
+    font-size: 16px;
     outline: none;
     margin-bottom: 10px;
+    padding: 5px;
 }
 .formulario-login input:hover,input:focus{
     border: solid 2px #1A3850;
@@ -533,4 +534,10 @@ textarea{
     width: 100%;
     height: 100%;
     border-radius: 30px 5px 30px 10px;
+}
+
+.login-resultado{
+    color: red;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -13,11 +13,12 @@
         <div class="col1-login">
             <img src="../imgs/logo/Logo Projeto Flux-2.png" alt="" width="200px">
             <div class="formulario-login">
-                <span>Usuário:</span>
-                <input type="text" class="login-user">
+                <span>Email:</span>
+                <input onkeydown="reset()" type="email" class="login-user" id="input_user" placeholder="example@domain.com">
                 <span>Senha:</span>
-                <input type="text" class="login-user">
-                <button>Entrar</button>
+                <input onkeydown="reset()" type="password" class="login-user" id="input_senha" placeholder="">
+                <button onclick="validacao()">Entrar</button>
+                <div id="res"></div>
             </div>
 
         </div>
@@ -29,3 +30,52 @@
 
 </body>
 </html>
+
+<script>
+
+    function validacao(){
+        res.innerHTML = '';
+        var user = input_user.value;
+        var senha = input_senha.value;
+        var emailValido = false;
+        var senhaValida = false;
+
+        if(user.length <= 12){
+            erroEmail();
+            emailValido = false;
+        }else if(!user.endsWith("@flux.com")){
+            erroEmail();
+            emailValido = false;
+        }else if(user.startsWith("lucas") || user.startsWith("enzo") || user.startsWith("gabriel") || user.startsWith("felipe") || user.startsWith("nathan") || user.startsWith("igor")){
+            emailValido = true;
+        }else{
+            erroEmail();
+            emailValido = false;
+        }
+
+        if(senha != "sptechFlux"){
+            erroPassword();
+            senhaValida = false;
+        }else{
+            senhaValida = true;
+        }
+
+        if(emailValido == true && senhaValida == true){
+            window.location.href = "../pages/dashboard.html";
+        }
+    }
+
+    function erroEmail(){
+        input_user.style.border = "solid 2px red";
+        res.innerHTML = `<p class="login-resultado">Email inválido. Tente novamente</p>`
+    }
+    function erroPassword(){
+        input_senha.style.border = "solid 2px red";
+        res.innerHTML = `<p class="login-resultado">Senha inválida. Tente novamente</p>`
+    }
+    function reset(){
+        input_user.style.border = "solid 2px #1A3850";
+        input_senha.style.border = "solid 2px #1A3850";
+    }
+
+</script>
