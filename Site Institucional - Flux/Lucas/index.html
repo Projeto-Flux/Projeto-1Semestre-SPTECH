@@ -83,12 +83,12 @@
         </div>
         <div class="container-calculadora">
             <div class="col1-calc">
-                <span>Área do shopping (m²)</span>
-                <input id="input_area" type="number">
+                <span>Área do shopping (mil m²)</span>
+                <input id="input_area" type="number" placeholder="70">
                 <span>Aluguel médio das lojas</span>
-                <input id="input_aluguel" type="number">
+                <input id="input_aluguel" type="number" placeholder="10000">
                 <span>Quantidade de lojas</span>
-                <input id="input_qtdLoja" type="number">
+                <input id="input_qtdLoja" type="number" placeholder="90">
                 <button onclick="simularInvestimento()">Simular investimento</button>
             </div>
             <div class="col2-calc" id="estiloMensagem">
@@ -184,7 +184,7 @@
         const scrollPercentage = (scrollY / pageHeight) * 100; // Define em porcentagem em qual parte o usuário está na tela
         
         // Define a cor do texto com base na posição da página
-        if(scrollPercentage < 26){
+        if(scrollPercentage < 21){
             header.innerHTML = `<div class="logo">
                                     <img src="imgs/logo/logo-transp.png" alt="" width="65px">
                                     <h1 >FLUX</h1>
@@ -198,7 +198,7 @@
                                     <li><a class="cor1" href="#contato">CONTATO</a></li>
                                 </div>
                         `
-        }else if(scrollPercentage < 54){
+        }else if(scrollPercentage < 59){
             header.innerHTML = `<div class="logo">
                                     <img src="imgs/logo/Logo_Projeto_Flux-4.png" alt="" width="65px">
                                     <h1 class="cor2">FLUX</h1>
@@ -212,7 +212,7 @@
                                     <li><a class="cor2" href="#contato">CONTATO</a></li>
                                 </div>
                         `
-        }else if(scrollPercentage < 78){
+        }else if(scrollPercentage < 85){
             header.innerHTML = `<div class="logo">
                                     <img src="imgs/logo/logo-transp.png" alt="" width="65px">
                                     <h1 >FLUX</h1>
@@ -287,9 +287,9 @@
             Além do ganho de uma melhor experiencia aos seu clientes, maior lucro aos lojistas e uma melhora na reputação de seu shopping.
             </span>`;
     
-            estiloMensagem.style.backgroundColor = "#6085a3a3";
-            estiloMensagem.style.padding = "10px";
-            estiloMensagem.style.borderRadius = "10px 0 10px 0" ;
+            estiloMensagem.style.backgroundColor = "#1A3850";
+            estiloMensagem.style.padding = "15px";
+            estiloMensagem.style.borderRadius = "20px 5px 20px 5px" ;
 
         }
 
