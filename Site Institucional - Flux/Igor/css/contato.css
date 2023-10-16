@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Fira+Sans+Condensed:wght@500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=PT+Sans&display=swap');
+
+* {
+    /* padding: 0;
+    margin: 0;
+    box-sizing: border-box; */
+    font-family: 'Dongle', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(80deg, #2A6F97, #014F86);
+}
+
+#up{
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #578aa8, #74a3b780);
+    filter: blur(80px);
+    animation: down 40s infinite;
+    z-index: 1;
+}
+#down{
+    position: absolute;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #4491decc, #6791bb80);
+    filter: blur(80px);
+    animation: up 30s infinite;
+    z-index: 1;
+}
+
+#left{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgb(43, 151, 194), #120205cc);
+    filter: blur(180px);
+    animation: left 30s 1s infinite;
+    z-index: 1;
+}
+
+#right{
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #6195ba99, #4c8198cc);
+    filter: blur(80px);
+    animation: right 40s .5s infinite;
+    z-index: 1;
+}
+
+
+@keyframes down{
+    0%, 100%{
+        top: -100px;
+    }
+    70%{
+        top: 700px
+    }
+}
+
+@keyframes up{
+    0%, 100%{
+        bottom: -100px;
+    }
+    70%{
+        bottom: 700px
+    }
+}
+
+@keyframes left{
+    0%, 100%{
+        left: -100px;
+    }
+    70%{
+        left: 1300px
+    }
+}
+
+@keyframes right{
+    0%, 100%{
+        right: -100px;
+    }
+    70%{
+        right: 1300px
+    }
+}
+
+

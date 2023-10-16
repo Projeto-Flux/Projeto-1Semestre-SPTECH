@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: radial-gradient(100% 100% at 50% 100%, rgba(0, 72, 255, 0.65) 0%, rgba(14, 95, 239, 0.6) 8.33%, rgba(25, 111, 233, 0.54) 16.67%, rgba(34, 125, 232, 0.49) 25%, rgba(43, 138, 234, 0.43) 33.33%, rgba(51, 151, 238, 0.38) 41.67%, rgba(60, 163, 243, 0.33) 50%, rgba(81, 175, 244, 0.27) 58.33%, rgba(104, 186, 244, 0.22) 66.67%, rgba(126, 196, 245, 0.16) 75%, rgba(147, 207, 245, 0.11) 83.33%, rgba(190, 227, 248, 0) 100%), radial-gradient(25% 25% at 50% 50%, #3182ce 0%, #8287e4 0%, #b194de 0%, #cda6db 0%, #ddbcd9 0%, #e3d5dd 0%, #ffffff 0%);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6%;
+    padding: 20px 100px;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 20px #646464;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 60px;
+    height: 60px;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    border-radius: 25%;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: .6s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.escalator_img {
+    display: flex;
+    width: 940px;
+    height: 1080px;
+    object-fit: contain;
+    border-radius: 25px;
+    justify-content: end;
+}

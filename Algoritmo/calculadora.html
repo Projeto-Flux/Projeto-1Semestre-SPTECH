@@ -5,19 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="stylecalculadora.css">
 </head>
 
 <body>
-    <p>Digite o tamanho do seu shopping (em mil m²)</p>
-    <input type="text" id="inp_tamanho" placeholder="Ex.: 19.9">
-
-    <p>Digite aluguel médio de suas lojas (R$):</p>
-    <input type="text" id="inp_aluguel">
-    <p>Digite a quantidade de lojas que seu shopping possui:</p>
-    <input type="text" id="inp_qntlojas">
-    <br><br>
-    <button onclick="lucroShop()">Analisar o lucro do meu shopping</button>
-    <div id="div_resultado"></div>
+    <section id="calculadora">
+        <div class="calc">
+            <div class="inputCalc">
+                <p>Tamanho do seu shopping (em mil m²)</p>
+                <input type="text" id="inp_tamanho" placeholder="Ex.: 25.0">
+                <p>Aluguel médio de suas lojas:</p>
+                <input type="text" id="inp_aluguel" placeholder="Ex.: R$25.000,00">
+                <p>Quantidade de lojas que seu shopping possui:</p>
+                <input type="text" id="inp_qntlojas" placeholder="Ex.: 75">
+                <br><br>
+                <button onclick="lucroShop()">Analisar o lucro do meu shopping</button>
+                <div id="div_resultado"></div>
+            </div>
+            
+            <img src="assets/imgs/calculadoraillustrationpng.jpg"></img>
+        </div>
+    </section>
+    <section id="info">
+        <div class="informacoes"></div>
+    </section>
 </body>
 
 </html>
@@ -34,43 +45,43 @@
         if (tamanho < 10) {
             sensores = tamanhoAreaUtil / 2;
 
-        }else
+        } else
 
-        if (tamanho >= 10) {
-            //sensores = tamanhoAreaUtil / 2.10; divisão do shopping de 2,10 m² em 2,10 m²
-            sensores = 1750;
+            if (tamanho >= 10) {
+                //sensores = tamanhoAreaUtil / 2.10; divisão do shopping de 2,10 m² em 2,10 m²
+                sensores = 1750;
 
-        }else
+            } else
 
-        if (tamanho >= 20) {
-            //sensores = tamanhoAreaUtil / 2.20; divisão do shopping de 2,2 m² em 2,2 m²
-            sensores = 2800;
+                if (tamanho >= 20) {
+                    //sensores = tamanhoAreaUtil / 2.20; divisão do shopping de 2,2 m² em 2,2 m²
+                    sensores = 2800;
 
-        }else
+                } else
 
-        if (tamanho >= 30) {
-            //sensores = tamanhoAreaUtil / 2.30; divisão do shopping de 2,30 m² em 2,30 m²
-            sensores = 3700;
-        }else
+                    if (tamanho >= 30) {
+                        //sensores = tamanhoAreaUtil / 2.30; divisão do shopping de 2,30 m² em 2,30 m²
+                        sensores = 3700;
+                    } else
 
-        if (tamanho >= 40) {
-            //sensores = tamanhoAreaUtil / 2.40; divisão do shopping de 2,4 m² em 2,4 m²
-            sensores = 4600;
-        }else
+                        if (tamanho >= 40) {
+                            //sensores = tamanhoAreaUtil / 2.40; divisão do shopping de 2,4 m² em 2,4 m²
+                            sensores = 4600;
+                        } else
 
-        if (tamanho >= 50) {
-            //sensores = tamanhoAreaUtil / 2.50; divisão do shopping de 2,5 m² em 2,5 m²
-            sensores = 7500;
-        }else
+                            if (tamanho >= 50) {
+                                //sensores = tamanhoAreaUtil / 2.50; divisão do shopping de 2,5 m² em 2,5 m²
+                                sensores = 7500;
+                            } else
 
-        if (tamanho >= 100) {
-            // sensores = tamanhoAreaUtil / 3; //divisão do shopping de 3 m² em 3 m²
-            sensores = 11300;
-        }else
+                                if (tamanho >= 100) {
+                                    // sensores = tamanhoAreaUtil / 3; //divisão do shopping de 3 m² em 3 m²
+                                    sensores = 11300;
+                                } else
 
-        if (tamanho >= 150) {
-            sensores = tamanhoAreaUtil / 3.2;
-        }
+                                    if (tamanho >= 150) {
+                                        sensores = tamanhoAreaUtil / 3.2;
+                                    }
 
         custo = (sensores * 100);
         var maoDeObra = custo * 0.5;
