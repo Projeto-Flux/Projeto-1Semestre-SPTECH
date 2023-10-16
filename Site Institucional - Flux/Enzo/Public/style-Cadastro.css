@@ -2,13 +2,6 @@ body {
     margin: 0;
     background:#1a3950;
 }
-/* body img{
-    width: 100vw;
-    height: 100vh;   
-    position: absolute;
-    z-index: -1;
-    opacity: 0.5;
-} */
 .logo{
     display: flex;
     justify-content: center;

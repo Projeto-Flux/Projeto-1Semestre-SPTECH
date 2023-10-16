@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flux-Cadastro</title>
+    <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
     <link rel="stylesheet" href="style-Cadastro.css">
 </head>
 
 <body>
-    <!-- <img src=""> -->
     <div class="logo">
         <a href="Home.html"> <img src="https://i.imgur.com/UcpJeKF.png"></a>
-        <!-- <h1>
-             <a href="Home.html">Flux</a>
-         </h1> -->
     </div>
     <div class="cadastro">
         <div class="container">
@@ -27,45 +24,45 @@
                         <span>
                             Nome do Shopping:
                         </span>
-                        <input placeholder="fluxshopping" required>
+                        <input id="input_nome_empresa" placeholder="fluxshopping" required>
                     </div>
                     <div class="campo">
                         <span>
                             CNPJ:
                         </span>
-                        <input placeholder="XX.XXX.XXX/0001-XX" required>
+                        <input id="input_cnpj" placeholder="XX.XXX.XXX/0001-XX" required>
                     </div>
                     <div class="campo">
                         <span>
                             CEP:
                         </span>
-                        <input placeholder="00000-000" required>
+                        <input id="input_cep" placeholder="00000-000" required>
                     </div>
                     <div class="campo">
                         <span>
                             Número:
                         </span>
-                        <input placeholder="123">
+                        <input id="input_numero" placeholder="123">
                     </div>
                     <div class="campo">
                         <span>
                             Email:
                         </span>
-                        <input type="email" placeholder="nomeshopping@email.com" required>
+                        <input  id="input_email" type="email" placeholder="nomeshopping@email.com" required>
                     </div>
                     <div class="campo">
                         <span>
                             Senha:
                         </span>
-                        <input type="password" placeholder="************" required>
+                        <input id="input_senha" type="password" placeholder="************" required>
                     </div>
                     <div class="campo">
                         <span>
                             Confirmação de Senha:
                         </span>
-                        <input type="password" placeholder="************" required>
+                        <input  id="input_confirmacao_senha" type="password" placeholder="************" required>
                     </div>
-                    <a href="Login.html"><button type="submit" class="botao">Cadastrar</button ></a>
+                    <a href="Login.html"><button onclick="validarCadastro()" type="submit" class="botao">Cadastrar</button ></a>
                 </div>
             </div>
         </div>
@@ -73,3 +70,35 @@
 </body>
 
 </html>
+<script>
+    function validarCadastro(){
+        var nomeEmpresa = input_nome_empresa.value;
+        var cnpj = input_cnpj.value;
+        var cep = input_cep.value;
+        var numero = input_numero.value;
+        var email = input_email.value;
+        var senha = input_senha.value;
+        var confirmacaoSenha = input_confirmacao_senha.value;
+
+        if(cnpj.replace(/[0-14]/) == true){
+        }
+        else {
+            alert(`CNPJ Inválido! Por favor Tente Novamente.`)
+        }
+        if (cep.replace(/[0-9]/)== true){
+        }
+        else{
+            alert(`CEP Inválido! Por favor Tente Novamente.`)
+        }
+        if(email.endsWith('.com')== true){
+        }
+        else {
+            alert(`Email Inválido! Por favor Tente Novamente.`)
+        }
+        if((senha == confirmacaoSenha) == true ){
+        }
+        else{
+            alert(`As senhas inseridas não são iguais! Por favor Tente Novamente.`)
+        }
+    }
+</script>
