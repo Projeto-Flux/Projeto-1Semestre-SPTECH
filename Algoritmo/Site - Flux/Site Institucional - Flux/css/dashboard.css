@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;600&family=Raleway:wght@200;400;800&family=Roboto:wght@300;400;700&family=Titillium+Web:wght@200;400;600&display=swap');
+
+
+* {
+    /* font-family: 'Jost', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif; */
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.graficos {
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}

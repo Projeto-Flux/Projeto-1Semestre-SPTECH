@@ -5,7 +5,7 @@ body {
     background-image: linear-gradient(80deg, #2A6F97, #014F86);
 }
 
-#up{
+#up {
     position: absolute;
     height: 800px;
     width: 800px;
@@ -15,7 +15,8 @@ body {
     animation: down 40s infinite;
     z-index: -10;
 }
-#down{
+
+#down {
     position: absolute;
     right: 0;
     height: 500px;
@@ -27,7 +28,7 @@ body {
     z-index: -10;
 }
 
-#left{
+#left {
     position: absolute;
     height: 500px;
     width: 500px;
@@ -38,7 +39,7 @@ body {
     z-index: -10;
 }
 
-#right{
+#right {
     position: absolute;
     height: 500px;
     width: 500px;
@@ -50,39 +51,51 @@ body {
 }
 
 
-@keyframes down{
-    0%, 100%{
+@keyframes down {
+
+    0%,
+    100% {
         top: -100px;
     }
-    70%{
+
+    70% {
         top: 700px
     }
-    
+
 }
 
-@keyframes up{
-    0%, 100%{
+@keyframes up {
+
+    0%,
+    100% {
         bottom: -100px;
     }
-    70%{
+
+    70% {
         bottom: 700px
     }
 }
 
-@keyframes left{
-    0%, 100%{
+@keyframes left {
+
+    0%,
+    100% {
         left: -100px;
     }
-    70%{
+
+    70% {
         left: 1300px
     }
 }
 
-@keyframes right{
-    0%, 100%{
+@keyframes right {
+
+    0%,
+    100% {
         right: -100px;
     }
-    70%{
+
+    70% {
         right: 1300px
     }
 }
@@ -90,12 +103,14 @@ body {
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
 }
-#login{
+
+#login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,12 +119,12 @@ body {
     z-index: 100;
 }
 
-.form-box{
+.form-box {
     position: relative;
     width: 400px;
     height: 450px;
     background: transparent;
-    border: 2px solid rgba(255,255,255,0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
@@ -117,18 +132,21 @@ body {
     align-items: center;
 
 }
-h2{
+
+h2 {
     font-size: 2em;
     color: #fff;
     text-align: center;
 }
-.inputbox{
+
+.inputbox {
     position: relative;
     margin: 30px 0;
     width: 310px;
     border-bottom: 2px solid #fff;
 }
-.inputbox label{
+
+.inputbox label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -139,11 +157,12 @@ h2{
     transition: .5s;
 }
 
-input:focus ~ label,
-input:valid ~ label{
-top: -5px;
+input:focus~label,
+input:valid~label {
+    top: -5px;
 
 }
+
 .inputbox input {
     width: 100%;
     height: 50px;
@@ -151,65 +170,45 @@ top: -5px;
     border: none;
     outline: none;
     font-size: 1em;
-    padding:0 35px 0 5px;
+    padding: 0 35px 0 5px;
     color: #fff;
 }
-.inputbox ion-icon{
+
+.inputbox ion-icon {
     position: absolute;
     right: 8px;
     color: #fff;
     font-size: 1.2em;
     top: 20px;
 }
-.forget{
-    margin: -15px 0 15px ;
+
+.forget {
+    margin: -15px 0 15px;
     font-size: .7em;
     color: #fff;
     display: flex;
     justify-content: space-between;
 }
 
-.forget label input{
+.forget label input {
     margin-right: 3px;
-    
+
 }
-.forget label a{
+
+.forget label a {
     padding-left: 102px;
     color: #fff;
     text-decoration: none;
 }
-.forget label a:hover{
+
+.forget label a:hover {
     text-decoration: underline;
 }
-button{
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    background: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 600;
-}
-.register{
-    font-size: .9em;
-    color: #fff;
-    text-align: center;
-    margin: 25px 0 10px;
-}
-.register p a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-}
-.register p a:hover{
-    text-decoration: underline;
-}
+
 
 /* ------------------------------------------------------------------CADASTRO ABAIXO------------------------------------------------------------------------- */
 
-#login{
+#login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,12 +217,12 @@ button{
     z-index: 100;
 }
 
-.form-boxCadastro{
+.form-boxCadastro {
     position: relative;
     width: 600px;
     height: 800px;
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
@@ -231,18 +230,21 @@ button{
     align-items: center;
 
 }
-h2{
+
+h2 {
     font-size: 2em;
     color: #fff;
     text-align: center;
 }
-.inputboxCadastro{
+
+.inputboxCadastro {
     position: relative;
     margin: 30px 0;
     width: 310px;
     border-bottom: 2px solid #fff;
 }
-.inputboxCadastro label{
+
+.inputboxCadastro label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -253,11 +255,12 @@ h2{
     transition: .5s;
 }
 
-input:focus ~ label,
-input:valid ~ label{
-top: -5px;
+input:focus~label,
+input:valid~label {
+    top: -5px;
 
 }
+
 .inputboxCadastro input {
     width: 100%;
     height: 50px;
@@ -265,37 +268,49 @@ top: -5px;
     border: none;
     outline: none;
     font-size: 1em;
-    padding:0 35px 0 5px;
+    padding: 0 35px 0 5px;
     color: #fff;
 }
-.inputboxCadastro ion-icon{
+
+.inputboxCadastro ion-icon {
     position: absolute;
     right: 8px;
     color: #fff;
     font-size: 1.2em;
     top: 20px;
 }
-.forget{
-    margin: -15px 0 15px ;
+
+.inputboxCadastro i {
+    padding-right: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.forget {
+    margin: -15px 0 15px;
     font-size: .7em;
     color: #fff;
     display: flex;
     justify-content: space-between;
 }
 
-.forget label input{
+.forget label input {
     margin-right: 3px;
-    
+
 }
-.forget label a{
+
+.forget label a {
     padding-left: 102px;
     color: #fff;
     text-decoration: none;
 }
-.forget label a:hover{
+
+.forget label a:hover {
     text-decoration: underline;
 }
-button{
+
+button {
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -305,19 +320,23 @@ button{
     cursor: pointer;
     font-size: 1em;
     font-weight: 600;
+    text-decoration: none;
 }
-.register{
+
+.register {
     font-size: .9em;
     color: #fff;
     text-align: center;
     margin: 25px 0 10px;
 }
-.register p a{
+
+.register p a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
 }
-.register p a:hover{
+
+.register p a:hover {
     text-decoration: underline;
 }
 
@@ -328,18 +347,19 @@ button{
     align-items: center;
 }
 
-#voltarHome {
-    height: 40px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    background: #fff;
-    border-radius: 40px;
+.voltar {
     font-size: .9em;
     color: #fff;
     text-align: center;
     margin: 25px 0 10px;
+}
+
+.voltar p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.voltar p a:hover {
+    text-decoration: underline;
 }
