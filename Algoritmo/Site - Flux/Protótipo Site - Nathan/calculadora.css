@@ -1,0 +1,17 @@
+.image_info{
+    width:10vw
+}
+.tampar{
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+
+}
+.paragrafo{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
