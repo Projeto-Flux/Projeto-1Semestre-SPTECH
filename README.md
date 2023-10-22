@@ -12,10 +12,8 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 <img  src="https://i.imgur.com/h4g3uG2.png" />
 
 ## 👤Cadastro e Login
-
-<img  src="https://i.imgur.com/uXKLu0p.png" />
-<img  src="https://i.imgur.com/g3NvYaQ.jpg" />
-<img  src="https://i.imgur.com/qeCH6xr.jpg" />
+<img  src="https://i.imgur.com/n3onA6G.png" />
+<img  src="https://i.imgur.com/NDyNFZm.png" />
 
 ## 🔢 Calculadora
 A calculadora financeira é uma ferramenta que permite que indivíduos interessados em nosso negócio determinem facilmente o valor de seu investimento e projetem seus potenciais lucros a partir desse investimento.<br>
