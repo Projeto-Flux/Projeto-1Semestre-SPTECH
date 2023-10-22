@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="css/login.css">
     <title>Flux - Cadastro</title>
+    <link rel="manifest" href="JavaScripit/logcad.js">
 </head>
 
 <body>
@@ -15,26 +16,50 @@
         <div class="form-boxCadastro">
             <div class="form-valueCadastro">
                 <form action="">
-                    <h2>Cadastre-se</h2>
+                    <h2>CADASTRE-SE</h2>
                     <div class="inputboxCadastro">
-                        <ion-icon name="home"></ion-icon>
-                        <input type="name" required>
+                        <ion-icon name="text-outline"></ion-icon>
+                        <input type="name" required id="nome_form">
                         <label for="">Nome</label>
+                        <span id="nomeInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="briefcase"></ion-icon>
+                        <input type="text" required id="cnpj_form">
+                        <label for="">CNPJ</label>
+                        <span id="CNPJInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="location"></ion-icon>
+                        <input type="name" required id="cep_form">
+                        <label for="">CEP</label>
+                        <span id="nomeInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="location"></ion-icon>
+                        <input type="name" required id="num_form">
+                        <label for="">Numero</label>
+                        <span id="nomeInvalido"></span>
                     </div>
                     <div class="inputboxCadastro">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required>
+                        <input type="email" required id="email_form">
                         <label for="">Email</label>
                     </div>
                     <div class="inputboxCadastro">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input type="password" required id="senha_form">
                         <label for="">Senha</label>
                     </div>
-                    <div class="forget">
-                        <label for=""><input type="checkbox">Lembrar de mim <a href="#">Esqueci a senha</a></label>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required id="confirm_form">
+                        <label for="">Confirmar senha</label>
                     </div>
-                    <button>Log in</button>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Lembrar de mim
+                    </div>
+                    <button onclick="Cadastrar()">Cadastrar</button>
                     <div class="register">
                         <p>Já possuí uma conta? <a href="login.html">Faça login</a></p>
                     </div>
@@ -51,3 +76,6 @@
 </body>
 
 </html>
+
+<script>
+</script>

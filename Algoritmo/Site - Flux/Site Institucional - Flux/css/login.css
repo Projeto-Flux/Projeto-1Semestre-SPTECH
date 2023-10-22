@@ -1,3 +1,7 @@
+* {
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -217,10 +221,14 @@ input:valid~label {
     z-index: 100;
 }
 
+.form-valueCadastro h2 {
+    padding-top: 10px;
+}
+
 .form-boxCadastro {
     position: relative;
     width: 600px;
-    height: 800px;
+    height: 850px;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
@@ -252,7 +260,7 @@ h2 {
     color: #fff;
     font-size: 1em;
     pointer-events: none;
-    transition: .5s;
+    transition: .6s;
 }
 
 input:focus~label,
