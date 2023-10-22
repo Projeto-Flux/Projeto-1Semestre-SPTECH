@@ -5,25 +5,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora Financeira</title>
+    <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
     <link rel="stylesheet" href="css/stylecalculadora.css">
 </head>
 
 <body>
     <section id="calculadora">
+        <video src="assets/imgs/Design sem nome.mp4" muted loop autoplay></video>
         <div class="calc">
+            <a href="index.html"><img class="logo" src="assets/imgs/Logo 3.png"></a>
+            <h3>Comece a moldar o futuro de seu shopping hoje</h3><br>
+            <p>Aqui você pode Calcular seu Investimento,insira detalhes como tamanho, aluguel médio e número de lojas
+                para estimar sensores necessários e custos. Veja como esse investimento pode impulsionar seus ganhos e
+                mostrando o retorno esperado. Tome decisões informadas para um shopping mais eficiente e atraente.</p>
             <div class="inputCalc">
                 <p>Tamanho do seu shopping (em mil m²)</p>
-                <input type="text" id="inp_tamanho" placeholder="Ex.: 25.0">
+                <input type="text" id="inp_tamanho" placeholder="Ex.: 25 m2">
                 <p>Aluguel médio de suas lojas:</p>
-                <input type="text" id="inp_aluguel" placeholder="Ex.: R$25.000,00">
+                <input type="text" id="inp_aluguel" placeholder="Ex.: R$ 5.000,00">
                 <p>Quantidade de lojas que seu shopping possui:</p>
                 <input type="text" id="inp_qntlojas" placeholder="Ex.: 75">
                 <br><br>
-                <button onclick="lucroShop()">Analisar o lucro do meu shopping</button>
+                <button type="submit" onclick="lucroShop()">Simular</button><br>
                 <div id="div_resultado"></div>
             </div>
-            
-            <img src="assets/imgs/calculadoraillustrationpng.jpg"></img>
         </div>
     </section>
     <section id="info">
@@ -44,44 +49,27 @@
 
         if (tamanho < 10) {
             sensores = tamanhoAreaUtil / 2;
-
-        } else
-
-            if (tamanho >= 10) {
-                //sensores = tamanhoAreaUtil / 2.10; divisão do shopping de 2,10 m² em 2,10 m²
-                sensores = 1750;
-
-            } else
-
-                if (tamanho >= 20) {
-                    //sensores = tamanhoAreaUtil / 2.20; divisão do shopping de 2,2 m² em 2,2 m²
-                    sensores = 2800;
-
-                } else
-
-                    if (tamanho >= 30) {
-                        //sensores = tamanhoAreaUtil / 2.30; divisão do shopping de 2,30 m² em 2,30 m²
-                        sensores = 3700;
-                    } else
-
-                        if (tamanho >= 40) {
-                            //sensores = tamanhoAreaUtil / 2.40; divisão do shopping de 2,4 m² em 2,4 m²
-                            sensores = 4600;
-                        } else
-
-                            if (tamanho >= 50) {
-                                //sensores = tamanhoAreaUtil / 2.50; divisão do shopping de 2,5 m² em 2,5 m²
-                                sensores = 7500;
-                            } else
-
-                                if (tamanho >= 100) {
-                                    // sensores = tamanhoAreaUtil / 3; //divisão do shopping de 3 m² em 3 m²
-                                    sensores = 11300;
-                                } else
-
-                                    if (tamanho >= 150) {
-                                        sensores = tamanhoAreaUtil / 3.2;
-                                    }
+        } else if (tamanho >= 10 && tamanho <= 19) {
+            //sensores = tamanhoAreaUtil / 2.10; divisão do shopping de 2,10 m² em 2,10 m²
+            sensores = 1750;
+        } else if (tamanho >= 20 && tamanho <= 29) {
+            //sensores = tamanhoAreaUtil / 2.20; divisão do shopping de 2,2 m² em 2,2 m²
+            sensores = 2800;
+        } else if (tamanho >= 30 && tamanho <= 39) {
+            //sensores = tamanhoAreaUtil / 2.30; divisão do shopping de 2,30 m² em 2,30 m²
+            sensores = 3700;
+        } else if (tamanho >= 40 && tamanho <= 49) {
+            //sensores = tamanhoAreaUtil / 2.40; divisão do shopping de 2,4 m² em 2,4 m²
+            sensores = 4600;
+        } else if (tamanho >= 50 && tamanho <= 59) {
+            //sensores = tamanhoAreaUtil / 2.50; divisão do shopping de 2,5 m² em 2,5 m²
+            sensores = 7500;
+        } else if (tamanho >= 100 && tamanho <= 149) {
+            // sensores = tamanhoAreaUtil / 3; /divisão do shopping de 3 m² em 3 m²
+            sensores = 11300;
+        } else {
+            sensores = tamanhoAreaUtil / 3.2;
+        }
 
         custo = (sensores * 100);
         var maoDeObra = custo * 0.5;
@@ -91,9 +79,9 @@
         var sensorAredon = sensores.toFixed(0); //.toFixed(0) para não permiti um número imenso com casas decimais!
 
         div_resultado.innerHTML = `
-            Seriam necessários ${sensorAredon} sensores para cobrir seu shopping com uma ótima qualidade.<br>
-            Com base em nossa simulação acreditamos que você ganha cerca de R$${lucroTotal} apenas com os alugueis, com a implementação do nosso sistema você conseguiria reduzir 13% de seus clientes que desistem das compras, podendo chegar até R$${lucroTotal * 0.13} de ganho a mais com os alugueis mensais.<br>
-            Tendo um  investimento inicial de instalação de apenas R$${maoDeObra + custo}. Você poderá esperar um retorno em aproximadamente ${retorno.toFixed(0)} meses.<br>
+            Seriam necessários <u><b>${sensorAredon}</b></u> sensores para cobrir seu shopping com uma ótima qualidade.<br>
+            Com base em nossa simulação acreditamos que você ganha cerca de <u><b>R$ ${lucroTotal}</b></u> apenas com os alugueis, com a implementação do nosso sistema você conseguiria reduzir 13% de seus clientes que desistem das compras, podendo chegar até <u><b>R$ ${lucroTotal * 0.13}</b></u> de ganho a mais com os alugueis mensais.<br>
+            Tendo um  investimento inicial de instalação de apenas <u><b>R$${maoDeObra + custo}</b></u>. Você poderá esperar um retorno em aproximadamente <u><b>${retorno.toFixed(0)}</b></u> meses.<br>
             Além do ganho de uma melhor experiencia aos seu clientes, maior lucro aos lojistas e uma melhora na reputação de seu shopping.`;
     }
 </script>

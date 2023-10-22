@@ -1,8 +1,3 @@
-/* * {
-    margin: 0;
-    padding: 0;
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;600&family=Raleway:wght@200;400;800&family=Titillium+Web:wght@200;400;600&display=swap');
 
 body {
@@ -15,13 +10,23 @@ body {
     overflow-x: hidden;
 }
 
+.logo {
+    display: flex;
+    width: 130px;
+    height: 130px;
+}
+
+h3 {
+    color: #fdfdfd;
+}
+
 #calculadora {
     width: 100%;
     height: 930px;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    align-self: center;
     font-family: 'Jost', sans-serif;
     text-transform: uppercase;
     font-size: 16px;
@@ -32,32 +37,85 @@ body {
     height: 800px;
     padding: 25px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background: rgba(255, 255, 255, 0.12);
+    flex-direction: column;
+    background: rgb(26, 57, 80, 0.5);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(20px);
+    justify-content: space-between;
     align-content: center;
     align-items: center;
 }
 
 .inputCalc {
-    
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+
 }
 
-.calc img {
-    position: relative;
-    left: 85px;
-    width: 800px;
-    height: 840px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    opacity: 1;
-    z-index: 1;
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20px;
+    border: 1px solid#ccc;
+    border-radius: 50px;
+    background-color: fdfdfd;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+button {
+    display: flex;
+    border: 0;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: fdfdfd;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #366b97;
+    width: 120px;
+    transition: 0.5s;
+    outline: 0;
+}
+
+button:hover {
+    background-color: #366b97;
+    color: #fdfdfd;
+}
+
+.calc p {
+    color: #fdfdfd;
+}
+
+.inputCalc p {
+    color: #fdfdfd;
+}
+
+#calculadora video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: -10;
+    background: rgb(130, 156, 188);
+    background: linear-gradient(180deg, rgba(130, 156, 188, 0) 0%, rgba(130, 156, 188, 1) 100%);
 }
 
 #div_resultado {
-    
+    color: #fdfdfd;
+    text-align: center;
 }

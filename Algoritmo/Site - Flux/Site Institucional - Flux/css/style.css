@@ -3,9 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=PT+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-/* font-family: 'Fira Sans Condensed', sans-serif; */
-/* font-family: 'PT Sans', sans-serif; */
-
 * {
     margin: 0;
     padding: 0;
@@ -44,7 +41,6 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* box-shadow: 0px 5px 5px #353535cc;*/
     backdrop-filter: blur(2px);
     z-index: 100;
     border-bottom: 1px solid rgb(0, 0, 0, .1);
@@ -102,47 +98,6 @@ body {
     transform: scale(1.10);
 }
 
-/* Header termina aqui */
-
-
-/* Botão começa aqui
-
-/* button {
-    width: 250px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    border: 2px;
-    border-radius: 20px;
-    background-color: rgb(145, 145, 145, .3);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 1000;
-    font-size: 15px;
-    line-height: 0.5;
-    font-family: 'Josefin Sans', sans-serif;
-    cursor: pointer;
-    -webkit-font-smoothing: antialiased;
-} 
-
-button:hover {
-    opacity: 0.8;
-}
-
-button:active {
-    box-shadow: inset 0 1px 1px 1px hsla(0, 100%, 50%, 0.1);
-}
-
-button:focus {
-    outline: thin;
-    outline: 0.5px auto -webkit-focus-ring-color;
-    outline-offset: -1px;
-} */
-
-/* Botão termina aqui */
-
 #home {
     width: 100%;
     height: 1080px;
@@ -157,7 +112,6 @@ button:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgb(255, 0, 0, 0.2); */
     z-index: 2;
     text-align: justify;
 }
@@ -171,8 +125,8 @@ button:focus {
     object-fit: cover;
     opacity: 0.5;
     z-index: -10;
-    background: rgb(130,156,188);
-    background: linear-gradient(180deg, rgba(130,156,188,0) 0%, rgba(130,156,188,1) 100%);
+    background: rgb(130, 156, 188);
+    background: linear-gradient(180deg, rgba(130, 156, 188, 0) 0%, rgba(130, 156, 188, 1) 100%);
 }
 
 .overlay {
@@ -184,7 +138,7 @@ button:focus {
     object-fit: cover;
     opacity: 1;
     z-index: -10;
-    background: linear-gradient(180deg, rgba(130,156,188,0) 50%, rgba(130,156,188,1) 100%);
+    background: linear-gradient(180deg, rgba(130, 156, 188, 0) 50%, rgba(130, 156, 188, 1) 100%);
 }
 
 
@@ -259,13 +213,13 @@ button:focus {
 .titulo h1 {
     margin-bottom: 50px;
     text-transform: uppercase;
-    color: #120205;
+    color: white;
 }
 
 .titulo p {
     margin-bottom: 50px;
     text-transform: uppercase;
-    color: #120205;
+    color: #ffffff;
 }
 
 #projeto {
@@ -282,8 +236,8 @@ button:focus {
     flex-direction: column;
     align-items: center;
     color: #000000;
-    background: rgb(130,155,186);
-    background: linear-gradient(180deg, rgba(130,155,186,1) 0%, rgba(29,52,97,1) 100%);
+    background: rgb(130, 155, 186);
+    background: linear-gradient(180deg, rgba(130, 155, 186, 1) 0%, rgba(29, 52, 97, 1) 100%);
     z-index: 10;
 }
 
@@ -329,7 +283,14 @@ button:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #120205
+    color: #ffffff;
+}
+
+span {
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: large;
 }
 
 
@@ -378,7 +339,7 @@ button:focus {
 
 .card h2 {
     font-size: 18px;
-    color: #120205;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
@@ -386,7 +347,7 @@ button:focus {
     font-size: 12px;
     margin-bottom: 30px;
     line-height: 1.5;
-    color: #000000;
+    color: #ffffff;
 }
 
 .button {
@@ -400,7 +361,7 @@ button:focus {
 .button:hover {
     transition: 1 ease;
     background-color: #000000;
-    
+
 }
 
 @media screen and (max-width: 940px) {
@@ -451,22 +412,13 @@ button:focus {
     justify-content: space-evenly;
 }
 
-/* .foot {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 100vw;
-    height: 80vh;
-    background: #000000;
-} */
-
 .footer {
     width: 100%;
     height: 400px;
     position: relative;
     bottom: 0;
-    background: rgb(29,52,97);
-    background: linear-gradient(180deg, rgba(29,52,97,1) 0%, rgba(0,0,0,1) 70%);
+    background: rgb(29, 52, 97);
+    background: linear-gradient(180deg, rgba(29, 52, 97, 1) 0%, rgba(0, 0, 0, 1) 70%);
     opacity: 1;
     color: #ffffff;
     padding: 100px 10px 10px 100px;
@@ -492,7 +444,7 @@ button:focus {
 .col {
     margin-top: 50px;
     flex-basis: 25%;
-    
+
     padding-right: 100px;
 }
 
@@ -511,7 +463,7 @@ button:focus {
     width: fit-content;
     margin-bottom: 5px;
     position: relative;
-    
+
 }
 
 .col h3 {
@@ -521,6 +473,7 @@ button:focus {
     margin-bottom: 40px;
     position: relative;
 }
+
 .email-id {
     width: fit-content;
     border-bottom: 0.5px solid rgb(255, 255, 255, 0.8);
@@ -568,9 +521,5 @@ form input {
 hr {
     margin-top: 20px;
     width: 80%;
-    
+
 }
-
-
-
-
