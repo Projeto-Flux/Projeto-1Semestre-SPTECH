@@ -3,17 +3,31 @@
 </h3>
 
 # Projeto Flux
-Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evitando o congestionamento de pessoas, melhorando a distribuição de lojas e consequentemente melhorando a experiência e maximizando a visibilidade do shopping e seus futuros lucros. 
+<p>
+Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evitando o congestionamento de pessoas, melhorando a distribuição de lojas, consequentemente melhorando a experiência e maximizando a visibilidade do shopping estimando seus futuros lucros. Além disso, o controle de fluxo de pessoas desempenha um papel crucial na segurança, permitindo a identificação rápida de áreas com grande concentração de visitantes, o que é vital para o gerenciamento de situações de emergência. Este projeto é uma demonstração de como a tecnologia pode ser aplicada de maneira inteligente para aprimorar a experiência dos clientes, otimizar as operações e garantir a segurança em ambientes comerciais movimentados, mantendo o shopping como um local atraente e seguro para todos.
+</p>
 
 ## 🌐 Site Institucional
+<p>
+  Nosso site é o guia completo para a revolução na gestão do fluxo de pessoas em ambientes específicos. Oferecemos informações detalhadas sobre nossa tecnologia, benefícios comprovados, estudos de caso, etc. Descubra como otimizar a experiência dos visitantes e a eficiência dos negócios. Junte-se a nós nessa jornada de inovação.
+</p>
 <img  src="https://i.imgur.com/AxletDS.png" />
-<img  src="https://i.imgur.com/MYPTYaF.png" />
+<img  src="https://i.imgur.com/qaTXfKS.png" />
 <img  src="https://i.imgur.com/9OuiSnP.png" />
 <img  src="https://i.imgur.com/h4g3uG2.png" />
 
 ## 👤Cadastro e Login
+<p>
+  Nossa tela de cadastro permite que você entre na nossa comunidade, enquanto o login oferece acesso seguro a todas as funcionalidades. Cadastre-se para personalizar sua experiência e aproveitar recursos exclusivos, garantindo segurança e proteção de dados com o login. 
+</p>
 <img  src="https://i.imgur.com/n3onA6G.png" />
 <img  src="https://i.imgur.com/NDyNFZm.png" />
+
+## 📊 Dashboard
+<p>
+  Nossa dashboard centraliza o controle do fluxo de pessoas em áreas específicas. Oferecemos uma visão em tempo real com análises e dados atualizados para monitorar a densidade de visitantes, ajustar alertas de capacidade máxima e tomar decisões estratégicas. Com gráficos claros e informações valiosas, nossa dashboard torna seu espaço mais seguro, eficiente e atraente. Esteja no controle com nossa ferramenta de gestão do fluxo de pessoas.
+</p>
+<img  src="https://i.imgur.com/flEfcOa.png" />
 
 ## 🔢 Calculadora
 A calculadora financeira é uma ferramenta que permite que indivíduos interessados em nosso negócio determinem facilmente o valor de seu investimento e projetem seus potenciais lucros a partir desse investimento.<br>
