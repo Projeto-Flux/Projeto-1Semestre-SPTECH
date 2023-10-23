@@ -272,6 +272,7 @@ body {
     flex-direction: row;
     text-align: justify;
     align-items: center;
+    color: #fff;
 }
 
 .titulo h1 {
@@ -291,6 +292,7 @@ span {
     font-family: 'poppins', sans-serif;
     text-transform: uppercase;
     font-size: large;
+    color: #fff;
 }
 
 
@@ -317,6 +319,7 @@ span {
     background: transparent;
     transition: transform 1s;
     background: 0.5s;
+    
 }
 
 
@@ -348,6 +351,7 @@ span {
     margin-bottom: 30px;
     line-height: 1.5;
     color: #ffffff;
+    text-align: justify;
 }
 
 .button {
