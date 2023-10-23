@@ -4,8 +4,8 @@
 <head>
     <title>Flux - Login</title>
     <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
-    <link rel="manifest" href="logcad.js">
     <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
@@ -16,17 +16,17 @@
     <section id="login">
         <div class="form-box">
             <div class="form-value">
-                <form action="">
+                <div>
                     <h2>Login</h2>
-                    
+
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required >
+                        <input type="email" required id="email_form">
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
+                        <input type="password" required id="senha_form">
                         <label for="">Senha</label>
                     </div>
                     <div class="forget">
@@ -37,7 +37,7 @@
                     <div class="register">
                         <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -45,5 +45,25 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 <script>
+
+
+
+
+    function logar() {
+        var entradaEmail = email_form.value;
+        var entradaSenha = senha_form.value;
+
+        if (entradaEmail === 'jkiguatemi@jkiguatemi.com' && entradaSenha === 'jkiguatemi@') {
+            window.open("Dashboard.html");
+
+        } else if (entradaEmail === 'tieteplaza@tieteplaza.com' && entradaSenha === 'tieteplaza@') {
+            window.open("Dashboard.html");
+
+        } else if (entradaEmail == 'shoppingguaianazes@shoppingguaianazes.com' && entradaSenha == 'shoppingguaianazes@') {
+            window.open("Dashboard.html");
+
+        } else alert(`Usuário não encontrado`)
+    }
 </script>
+
 </html>

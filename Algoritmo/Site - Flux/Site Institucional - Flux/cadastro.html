@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Flux - Cadastro</title>
-    <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
     <link rel="stylesheet" href="css/login.css">
+    <title>Flux - Cadastro</title>
 </head>
 
 <body>
@@ -15,7 +14,7 @@
     <section id="login">
         <div class="form-boxCadastro">
             <div class="form-valueCadastro">
-                <form action="">
+                <div>
                     <h2>CADASTRE-SE</h2>
                     <div class="inputboxCadastro">
                         <ion-icon name="text-outline"></ion-icon>
@@ -66,7 +65,7 @@
                     <div class="voltar">
                         <p><a href="index.html">Voltar ao inicio</a></p>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
@@ -78,4 +77,32 @@
 </html>
 
 <script>
+
+
+
+    function Cadastrar() {
+
+        var entradaNome = nome_form.value;
+        var entradaEmail = email_form.value;
+        var entradaSenha = senha_form.value;
+        var entradaCNPJ = cnpj_form.value;
+        var entradaNumero = num_form.value;
+        var entradaCEP = cep_form.value;
+        var confirmSenha = confirm_form.value;
+
+
+        if (entradaNome === 'Shopping JK Iguatemi' && entradaCNPJ === '12345678901010' && entradaCEP === '12345123' && entradaNumero === '111' && entradaEmail === 'jkiguatemi@jkiguatemi.com' && entradaSenha === 'jkiguatemi@' && confirmSenha === entradaSenha) {
+            window.location.replace("login.html");
+
+
+        } else if (entradaNome == 'Tiete Plaza' && entradaCNPJ == '09876543211010' && entradaCEP == '45612340' && entradaEmail == 'tieteplaza@tieteplaza.com' && entradaSenha == 'tieteplaza@' && confirmSenha === entradaSenha) {
+            window.location.replace("login.html");
+
+
+        } else if (entradaNome === 'Shopping Guaianazes' && entradaCNPJ === '90908080771010' && entradaCEP === '55544480' && entradaEmail === 'shoppingguaianazes@shoppingguaianazes.com' && entradaSenha === 'shoppingguaianazes@' && confirmSenha === entradaSenha) {
+            window.location.replace("login.html");
+
+
+        } else (alert(`Cadastro não efetuado, preencha corretamente os campos`));
+    }
 </script>
