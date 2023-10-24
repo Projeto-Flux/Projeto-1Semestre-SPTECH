@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;600&family=Raleway:wght@200;400;800&family=Titillium+Web:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jost:wght@100;400;600&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'poppins', sans-serif;
+}
 
 body {
+    
     width: 100%;
     height: 100%;
     margin: 0;
@@ -8,21 +13,25 @@ body {
     background: #ABD2FA;
     background: linear-gradient(180deg, #ABD2FA 0%, rgb(9, 21, 64, 0.5) 100%);
     overflow-x: hidden;
+    justify-content: center;
+    text-align: justify;
 }
 
 .logo {
     display: flex;
     width: 130px;
     height: 130px;
+    color: #000;
 }
 
 h3 {
-    color: #fdfdfd;
+    color: #ffffff;
+    font-size: 24px;
 }
 
 #calculadora {
     width: 100%;
-    height: 930px;
+    height: 923px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,29 +41,47 @@ h3 {
     font-size: 16px;
 }
 
-.calc {
-    width: 1400px;
-    height: 800px;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    background: rgb(26, 57, 80, 0.5);
-    border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(20px);
-    justify-content: space-between;
+.container {
+    height: 100px;
+    font-size: 12px;
+    font-weight: bold;
     align-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container p {
+    height: 10px;
+}
+
+.calc {
+    padding: 50px;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(1000px);
+    justify-content: space-evenly;
+    
 }
 
 .inputCalc {
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    color: #000;
+    font-size: 14px;
     align-content: center;
     align-items: center;
-    align-self: center;
-
+    padding-bottom: 100px;
+    text-align: justify;
 }
 
 input {
@@ -62,6 +89,7 @@ input {
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 400px;
     height: 20px;
     border: 1px solid#ccc;
     border-radius: 50px;
@@ -69,7 +97,9 @@ input {
     color: black;
     padding: 5px;
     cursor: pointer;
-
+    font-size: 12px;
+    align-content: center;
+    align-items: center;
 }
 
 button {
@@ -87,19 +117,21 @@ button {
     width: 120px;
     transition: 0.5s;
     outline: 0;
+    height: 25px;
 }
 
 button:hover {
-    background-color: #366b97;
-    color: #fdfdfd;
+    background-color: #000000;
+    color: #fff;
 }
 
 .calc p {
-    color: #fdfdfd;
+    color: #ffffff;
 }
 
 .inputCalc p {
-    color: #fdfdfd;
+    
+    color: #ffffff;
 }
 
 #calculadora video {
@@ -116,8 +148,8 @@ button:hover {
 }
 
 #div_resultado {
-    width: 80%;
-    height: 60%;
-    color: #fdfdfd;
+    width: 90%;
+    height: 90%;
+    color: #ffffff;
     text-align: justify;
 }

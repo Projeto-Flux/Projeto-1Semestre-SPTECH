@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@500&family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jost:wght@100;400;600&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
 
 /* font-family: 'Fira Sans Condensed', sans-serif; */
 /* font-family: 'PT Sans', sans-serif; */
@@ -9,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
 body {

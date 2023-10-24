@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jost:wght@100;400;600&family=Raleway:wght@200;400;800&family=Roboto:wght@300;400;700&family=Titillium+Web:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jost:wght@100;400;600&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
 
 * {
     padding: 0;
@@ -6,7 +6,7 @@
     box-sizing: border-box;
     /* font-family: 'Hind', sans-serif;
     /* font-family: 'Jost', sans-serif; */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
 body {

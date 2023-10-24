@@ -13,12 +13,13 @@
     <section id="calculadora">
         <video src="assets/imgs/Design sem nome.mp4" muted loop autoplay></video>
         <div class="calc">
-            <a href="index.html"><img class="logo" src="assets/imgs/Logo 3.png"></a>
-            <h3>Comece a moldar o futuro de seu shopping hoje</h3><br>
-            <p>Aqui você pode Calcular seu Investimento,insira detalhes como tamanho, aluguel médio e número de lojas
-                para estimar sensores necessários e custos. Veja como esse investimento pode impulsionar seus ganhos e
-                mostrando o retorno esperado. Tome decisões informadas para um shopping mais eficiente e atraente.</p>
+            <div class="container">
+                <a href="index.html"><img class="logo" src="assets/imgs/Logo 3.png"></a>
+                <h3>Aqui você pode calcular seu investimento</h3><br>
+            </div>
             <div class="inputCalc">
+                <p>Insira informações do shopping como, tamanho, aluguel médio<br> e número de lojas
+                    para estimar resultados da nossa solução.</p>
                 <p>Tamanho do seu shopping (em mil m²)</p>
                 <input type="text" id="inp_tamanho" placeholder="Ex.: 25 m2">
                 <p>Aluguel médio de suas lojas:</p>
@@ -30,9 +31,6 @@
                 <div id="div_resultado"></div>
             </div>
         </div>
-    </section>
-    <section id="info">
-        <div class="informacoes"></div>
     </section>
 </body>
 
@@ -79,9 +77,12 @@
         var sensorAredon = sensores.toFixed(0); //.toFixed(0) para não permiti um número imenso com casas decimais!
 
         div_resultado.innerHTML = `
-            Seriam necessários <u><b>${sensorAredon}</b></u> sensores para cobrir seu shopping com uma ótima qualidade.<br>
-            Com base em nossa simulação acreditamos que você ganha cerca de <u><b>R$ ${lucroTotal}</b></u> apenas com os alugueis, com a implementação do nosso sistema você conseguiria reduzir 13% de seus clientes que desistem das compras, podendo chegar até <u><b>R$ ${lucroTotal * 0.13}</b></u> de ganho a mais com os alugueis mensais.<br>
-            Tendo um  investimento inicial de instalação de apenas <u><b>R$${maoDeObra + custo}</b></u>. Você poderá esperar um retorno em aproximadamente <u><b>${retorno.toFixed(0)}</b></u> meses.<br>
-            Além do ganho de uma melhor experiencia aos seu clientes, maior lucro aos lojistas e uma melhora na reputação de seu shopping.`;
+            Sensores necessários: <u><b>${sensorAredon}</b></u> <br>
+            Ganhos sem nossa solução: <u><b>R$${lucroTotal * 0.13}</b></u> <br>
+            Ganhos sobre nossa solução: <u><b>R$${lucroTotal}</b></u> <br>
+            Investimento necessário: <u><b>R$${maoDeObra + custo}</b></u> <br>
+            Tempo para o ROI (Retorno sobre investimento): <u><b>${retorno.toFixed(0)} meses</b></u>.<br><br>
+            Com a implementação da nossa solução, você conseguiria reduzir que até 13% da desistencia de seus clientes de frequentar seu shopping.
+            Além do ganho de uma melhor experiencia aos seu clientes, maior lucro aos lojistas e uma melhora na reputação de seu negócio.`
     }
 </script>
