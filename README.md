@@ -27,7 +27,7 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 <p>
   Nossa dashboard centraliza o controle do fluxo de pessoas em áreas específicas. Oferecemos uma visão em tempo real com análises e dados atualizados para monitorar a densidade de visitantes, ajustar alertas de capacidade máxima e tomar decisões estratégicas. Com gráficos claros e informações valiosas, nossa dashboard torna seu espaço mais seguro, eficiente e atraente. Esteja no controle com nossa ferramenta de gestão do fluxo de pessoas.
 </p>
-<img  src="https://i.imgur.com/flEfcOa.png" />
+<img  src="https://i.imgur.com/MmKFXD6.png" />
 
 ## 🔢 Calculadora
 A calculadora financeira é uma ferramenta que permite que indivíduos interessados em nosso negócio determinem facilmente o valor de seu investimento e projetem seus potenciais lucros a partir desse investimento.<br>
