@@ -12,7 +12,7 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
   Nosso site é o guia completo para a revolução na gestão do fluxo de pessoas em ambientes específicos. Oferecemos informações detalhadas sobre nossa tecnologia, benefícios comprovados, estudos de caso, etc. Descubra como otimizar a experiência dos visitantes e a eficiência dos negócios. Junte-se a nós nessa jornada de inovação.
 </p>
 <img  src="https://i.imgur.com/UB3uxA7.png" />
-<img  src="https://i.imgur.com/qaTXfKS.png" />
+<img  src="https://i.imgur.com/YrOlc9P.png" />
 <img  src="https://i.imgur.com/9OuiSnP.png" />
 <img  src="https://i.imgur.com/h4g3uG2.png" />
 
