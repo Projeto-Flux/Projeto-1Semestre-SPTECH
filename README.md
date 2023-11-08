@@ -20,7 +20,7 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 <p>
   Nossa tela de cadastro permite que você entre na nossa comunidade, enquanto o login oferece acesso seguro a todas as funcionalidades. Cadastre-se para personalizar sua experiência e aproveitar recursos exclusivos, garantindo segurança e proteção de dados com o login. 
 </p>
-<img  src="https://i.imgur.com/n3onA6G.png" />
+<img  src=https://i.imgur.com/2j3sjih.png" />
 <img  src="https://i.imgur.com/NDyNFZm.png" />
 
 ## 📊 Dashboard
