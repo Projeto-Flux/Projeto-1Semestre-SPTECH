@@ -10,8 +10,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #ABD2FA;
-    background: linear-gradient(180deg, #ABD2FA 0%, rgb(9, 21, 64, 0.5) 100%);
+    background: #000000;
+    background: linear-gradient(180deg, #070707 0%, rgb(9, 21, 64, 0.9) 100%);
     overflow-x: hidden;
     justify-content: center;
     text-align: justify;
@@ -19,8 +19,8 @@ body {
 
 .logo {
     display: flex;
-    width: 130px;
-    height: 130px;
+    width: 70px;
+    height: 70px;
     color: #000;
 }
 
@@ -38,11 +38,11 @@ h3 {
     align-self: center;
     font-family: 'Jost', sans-serif;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .container {
-    height: 100px;
+    height: 70px;
     font-size: 12px;
     font-weight: bold;
     align-content: center;
@@ -50,6 +50,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-top: 90px;
 }
 
 .container p {
@@ -62,9 +63,9 @@ h3 {
     height: 800px;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(7.5px);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(1000px);
     justify-content: space-evenly;
     
@@ -75,9 +76,9 @@ h3 {
     display: flex;
     flex-direction: column;
     align-self: center;
-    justify-content: center;
+    justify-content: space;
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     align-content: center;
     align-items: center;
     padding-bottom: 100px;
@@ -90,14 +91,14 @@ input {
     justify-content: center;
     text-align: center;
     width: 400px;
-    height: 20px;
+    height: 15px;
     border: 1px solid#ccc;
     border-radius: 50px;
     background-color: fdfdfd;
     color: black;
     padding: 5px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     align-content: center;
     align-items: center;
 }
@@ -130,7 +131,6 @@ button:hover {
 }
 
 .inputCalc p {
-    
     color: #ffffff;
 }
 

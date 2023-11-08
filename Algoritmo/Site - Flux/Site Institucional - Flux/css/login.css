@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-image: linear-gradient(80deg, #2A6F97, #014F86);
+    background-image: linear-gradient(80deg, #133549, #000e18);
 }
 
 #up {
@@ -17,7 +17,7 @@ body {
     height: 800px;
     width: 800px;
     border-radius: 50%;
-    background-image: linear-gradient(80deg, #578aa8, #74a3b780);
+    background-image: linear-gradient(80deg, #174158, #1c252980);
     filter: blur(150px);
     animation: down 40s infinite;
     z-index: -10;
@@ -29,7 +29,7 @@ body {
     height: 500px;
     width: 500px;
     border-radius: 50%;
-    background-image: linear-gradient(80deg, #4491decc, #6791bb80);
+    background-image: linear-gradient(80deg, #1e3d5ccc, #2c3c4d80);
     filter: blur(200px);
     animation: up 30s infinite;
     z-index: -10;
@@ -40,7 +40,7 @@ body {
     height: 500px;
     width: 500px;
     border-radius: 50%;
-    background-image: linear-gradient(80deg, rgb(43, 151, 194), #120205cc);
+    background-image: linear-gradient(80deg, rgb(11, 66, 88), #120205cc);
     filter: blur(180px);
     animation: left 30s 1s infinite;
     z-index: -10;
@@ -51,7 +51,7 @@ body {
     height: 500px;
     width: 500px;
     border-radius: 50%;
-    background-image: linear-gradient(80deg, #6195ba99, #4c8198cc);
+    background-image: linear-gradient(80deg, #173b50, #002d4d);
     filter: blur(80px);
     animation: right 40s .5s infinite;
     z-index: -10;

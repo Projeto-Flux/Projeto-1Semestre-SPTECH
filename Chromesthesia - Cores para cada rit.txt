@@ -1,0 +1,18 @@
+Chromesthesia - Cores para cada ritmo ou humor
+
+https://pubmed.ncbi.nlm.nih.gov/31031095/
+
+Inspirações p/ site - https://audiomack.com/ 
+
+Possíveis cores - Laranja - Vermelho #E28413 / #F56416 / #DD4B1A / #EF271B / #EA1744
+
+Cores site --- #3B2747 | Dark Purple --- #624185 | RUSSIAN VIOLET (PURPLE) --- #624185 | EMINENCE (LIGHT PURPLE) --- #001514 (BLACK) --- #FBF9FF (WHITE) --- #F2AD73 
+
+Contexto: Explicar o que é música, para que serve e o qual o objetivo do projeto.
+Falar a história da música, o contexto. (Pode ser mais de uma página)
+
+Objetivo: Curto e sucinto, que fala sobre o resultado que quer ter.
+
+Justificativa: É explicar o porque se identifica com o tema (socioemocional). (Meia página mais ou menos)
+
+Escopo: Requisitos funcionais: O que foi passado em aula e teremos que colocar no Trello.

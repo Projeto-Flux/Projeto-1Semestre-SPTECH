@@ -11,13 +11,55 @@
 }
 
 body {
-    display: grid;
-    justify-content: space-evenly;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    background: url('Design/main/website/gradient.svg');
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(80deg, #133549, #000e18);
+}
+
+#up {
     position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #174158, #1c252980);
+    filter: blur(150px);
+    animation: down 40s infinite;
+    z-index: -10;
+}
+
+#down {
+    position: absolute;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #1e3d5ccc, #2c3c4d80);
+    filter: blur(200px);
+    animation: up 30s infinite;
+    z-index: -10;
+}
+
+#left {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgb(11, 66, 88), #120205cc);
+    filter: blur(180px);
+    animation: left 30s 1s infinite;
+    z-index: -10;
+}
+
+#right {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #173b50, #002d4d);
+    filter: blur(80px);
+    animation: right 40s .5s infinite;
+    z-index: -10;
 }
 
 /* @keyframes gradient {

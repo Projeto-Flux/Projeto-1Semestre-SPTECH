@@ -1,5 +1,6 @@
 int sensor = 7;
 int leitura;
+int soma;
 
 void setup() {
 Serial.begin(9600);
