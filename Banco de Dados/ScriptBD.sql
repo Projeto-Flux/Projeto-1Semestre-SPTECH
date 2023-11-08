@@ -83,8 +83,7 @@ insert into sensor values
 (null,3,4),(null,5,5),
 (null,6,6),(null,7,6),
 (null,8,7),(null,1,8),
-(null,2,8),(null,3,9)
-	 ;
+(null,2,8),(null,3,9);
 
 insert into dadosFluxo values
 (null, '2023-10-18 15:30:00', 1, 1),
@@ -158,9 +157,6 @@ select s.nome as 'Shopping',
     join dadosFluxo as d on fkSensor = idSensor
     where s.nome like '%Aricanduva%';
 
-
-
-
 -- Selecionando os valores e suas respectivas zona de um determinado shopping em um horário específico
 select s.nome as 'Shopping',
 	   z.nome as 'Zona',
@@ -181,7 +177,7 @@ select s.nome as 'Shopping',
        u.idUsuario,
       u.nome,
       u.tipoUsuario
-       
+
 	from shopping as s
 	join zona as z on fkShopping = idShopping
     join sensor on fkZona = idZona
