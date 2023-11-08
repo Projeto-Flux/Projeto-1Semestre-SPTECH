@@ -13,7 +13,7 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 </p>
 <img  src="https://i.imgur.com/UB3uxA7.png" />
 <img  src="https://i.imgur.com/YrOlc9P.png" />
-<img  src="https://i.imgur.com/9OuiSnP.png" />
+<img  src="https://imgur.com/40e9b4eb-7f08-4923-b1ab-9b24967c9d0c" />
 <img  src="https://i.imgur.com/h4g3uG2.png" />
 
 ## 👤Cadastro e Login
