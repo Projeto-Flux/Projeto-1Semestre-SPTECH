@@ -32,7 +32,7 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 ## 🔢 Calculadora
 A calculadora financeira é uma ferramenta que permite que indivíduos interessados em nosso negócio determinem facilmente o valor de seu investimento e projetem seus potenciais lucros a partir desse investimento.<br>
 Consulte o codigo da nossa calculadora financeira [aqui](https://github.com/Projeto-Flux/Projeto-1Semestre-SPTECH/tree/main/Algoritmo)
-<img  src="https://i.imgur.com/2u8IpeP.png" />
+<img  src="https://i.imgur.com/CKAQtB6.png" />
 
 
 ## 💾 Banco de Dados
