@@ -1,8 +1,0 @@
-Ficha técnica do protótipo do site
-- Paleta de Cores
-• #1A3950 - Azul 
-• #FDFDFD - Branco 
-
-- Fontes
-• Títulos - Catchy Mager 
-• Textos - TT Hoves
