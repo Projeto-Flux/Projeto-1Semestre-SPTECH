@@ -1,5 +1,5 @@
 <h3 align="center">
-  <img src="https://i.imgur.com/JCfW7Ju.png" alt="Flux Logo" height="85"/>
+  <img src="https://i.imgur.com/h7hTOs2.png" alt="Flux Logo" height="85"/>
 </h3>
 
 # Projeto Flux
@@ -27,11 +27,13 @@ Um projeto que tem como objetivo controlar e gerar o mapeamento estratégico evi
 <p>
   Nossa dashboard centraliza o controle do fluxo de pessoas em áreas específicas. Oferecemos uma visão em tempo real com análises e dados atualizados para monitorar a densidade de visitantes, ajustar alertas de capacidade máxima e tomar decisões estratégicas. Com gráficos claros e informações valiosas, nossa dashboard torna seu espaço mais seguro, eficiente e atraente. Esteja no controle com nossa ferramenta de gestão do fluxo de pessoas.
 </p>
-<img  src="https://i.imgur.com/MmKFXD6.png" />
+<img  src="https://i.imgur.com/T2Y8DFS.png" />
 
 ## 🔢 Calculadora
 A calculadora financeira é uma ferramenta que permite que indivíduos interessados em nosso negócio determinem facilmente o valor de seu investimento e projetem seus potenciais lucros a partir desse investimento.<br>
 Consulte o codigo da nossa calculadora financeira [aqui](https://github.com/Projeto-Flux/Projeto-1Semestre-SPTECH/tree/main/Algoritmo)
+<img  src="https://i.imgur.com/CKAQtB6.png" />
+
 
 ## 💾 Banco de Dados
 Consulte nossas tabelas [nesses repositorio.](https://github.com/Projeto-Flux/Projeto-1Semestre-SPTECH/tree/main/Banco%20de%20Dados)
