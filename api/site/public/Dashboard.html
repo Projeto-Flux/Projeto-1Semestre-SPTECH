@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard </title>
+    <link rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+               <a href="index.html"> <img src="Design/main/website/logo branco flux.svg"></a>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="Pesquisar...">
+                <label for="search"></label> <i class="fas fa-search" id="i"></i>
+            </div>
+            <i class="fa-solid fa-list"></i>
+            <div class="user">
+                <img src="Design/main/website/user.svg" alt="">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-people-group" id="i"></i>
+                        <div>Zonas</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-plus" id="i"></i>
+                        <div>Usuário</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chalkboard-teacher" id="i"></i>
+                        <div>Estatísticas</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users" id="i"></i>
+                        <div>Analytics</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-hand-holding-usd" id="i"></i>
+                        <div>Relatório</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog" id="i"></i>
+                        <div>Configurações</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-question" id="i"></i>
+                        <div>Ajuda</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">2.678</div>
+                        <div class="card-name">Pessoas</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate" id="i"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">Ω (omega)</div>
+                        <div class="card-name">Zona mais movimentada</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="Ω" id="i"></i>
+                    </div>
+                </div>
+                <div class="card alarm"  style="background-color:rgb(225, 214, 0);">
+                    <div class="card-content1">
+                        <div class="number">Amarelo</div>
+                        <div class="card-name">Alarme</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-exclamation-triangle" id="i"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="number">13h</div>
+                        <div class="card-name">Hora mais movimentada</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign" id="i"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Ocupação atual do Shopping</h2>
+                    <div class="graficos">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h2>Pessoas por Zona</h2>
+                    <div class="graficos">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
+</body>
+
+</html>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7b9aff81d8.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+    // Gráfico de Barras - refere-se a quantidade de zonas no shopping
+    //Sugestão de Kpi's = Zona mais lotada, Zona mais Vazia, Média de Pessoas e Total de Pessoas.
+
+
+    const labels = [
+        'Alpha',
+        'Beta',
+        'Delta',
+        'Epilson',
+        'Sigma',
+        'Omega',
+        'Teta',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Pessoas por Zona',
+            data: [320, 229, 500, 423, 368, 657, 181],
+            backgroundColor: '#1a3950',
+            borderColor: '#a5efd3',
+
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Pessoas por Zona do Shopping'
+                }
+            }
+        }
+    };
+
+
+
+    // Gráfico de Pizza - refere-se a ocupação total do shopping
+    //Sugestão de Kpi's = Porcentagem de Ocupação de Pessoas,Porcentagem Ocupação Livre de Pessoas e Total de Pessoas.
+
+
+    const labels2 = [
+        'Livre',
+        'Ocupado',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Ocupação Atual do Shopping',
+            data: [1.217, 2.678],
+            backgroundColor: [
+                'rgb(26, 57, 80, 0.5)',
+                'rgb(26, 57, 80)'
+            ],
+            borderColor: '#000',
+
+        }]
+    };
+
+    const config2 = {
+        type: 'pie',
+        data: data2,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Ocupação Atual do Shopping'
+                }
+            }
+        },
+    };
+    // Gráfico de Linhas - refere- se ao movimento de pessoas por hora do dia
+    //Sugestão de Kpi's = Horário de Pico,Horário mais vazio, Média de Pessoas e Total de Pessoas.
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+</script>

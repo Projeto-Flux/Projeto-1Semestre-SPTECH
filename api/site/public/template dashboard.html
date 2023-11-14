@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flux-Dashboards</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <div class="graficos">
+        <div class="chartBarra" style="width: 500px; height: 300px;">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="chartPizza" style="width: 500px; height: 300px;">
+            <canvas id="myChart2"></canvas>
+        </div>
+
+        <div class="chartLinha" style="width: 500px; height: 300px;">
+            <canvas id="myChart3"></canvas>
+        </div>
+
+        <div class="chartRadar" style="width: 500px; height: 300px;">
+            <canvas id="myChart4"></canvas>
+        </div>
+
+        <div class="chartLinnha2" style="width: 500px; height: 300px;">
+            <canvas id="myChart5"></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    // Gráfico de Barras - refere-se a quantidade de zonas no shopping
+    //Sugestão de Kpi's = Zona mais lotada, Zona mais Vazia, Média de Pessoas e Total de Pessoas.
+
+
+    const labels = [
+        'Alpha',
+        'Beta',
+        'Delta',
+        'Epilson',
+        'Sigma',
+        'Omega',
+        'Teta',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Pessoas X Zona',
+            data: [5372, 1441, 2007, 959, 3765, 2221, 365],
+            backgroundColor: '#1a3950',
+            borderColor: '#000000',
+
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Pessoas por Zona do Shopping'
+                }
+            }
+        }
+    };
+
+
+
+    // Gráfico de Pizza - refere-se a ocupação total do shopping
+    //Sugestão de Kpi's = Porcentagem de Ocupação de Pessoas,Porcentagem Ocupação Livre de Pessoas e Total de Pessoas.
+
+
+    const labels2 = [
+        'Livre',
+        'Ocupado',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Ocupação Atual do Shopping',
+            data: [6.452, 9.678],
+            backgroundColor: [
+                'green',
+                'red'
+            ],
+            borderColor: '#000',
+
+        }]
+    };
+
+    const config2 = {
+        type: 'pie',
+        data: data2,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Ocupação Atual do Shopping'
+                }
+            }
+        },
+    };
+
+
+
+    // Gráfico de Linhas - refere- se ao movimento de pessoas por hora do dia
+    //Sugestão de Kpi's = Horário de Pico,Horário mais vazio, Média de Pessoas e Total de Pessoas.
+
+
+    const labels3 = [
+        '10:00',
+        '11:00',
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+        '18:00',
+        '19:00',
+        '20:00',
+        '21:00',
+        '22:00',
+    ];
+
+    const data3 = {
+        labels: labels3,
+        datasets: [{
+            label: 'Pessoas por hora do  dia',
+            data: [102, 132, 200, 224, 236, 189, 276, 201, 197, 323, 365, 108, 97],
+            backgroundColor: '#1a3950',
+            borderColor: '#000',
+
+        }]
+    };
+
+    const config3 = {
+        type: 'line',
+        data: data3,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Movimento de Pessoas por hora do dia '
+                }
+            }
+        },
+    };
+
+
+
+    // Gráfico de Radar - refere- se ao movimento de pessoas por dia
+    //Sugestão de Kpi's = Dia mais Lotado, Dia mais vazio e  Quantidade de Pessoas na semana.
+
+
+    const labels4 = [
+        'Domingo',
+        'Segunda-Feira',
+        'Terça-Feira',
+        'Quarta-Feira',
+        'Quinta-Feira',
+        'Sexta-Feira',
+        'Sabádo',
+    ];
+
+    const data4 = {
+        labels: labels4,
+        datasets: [{
+            label: 'Movimento de Pessoas por dia',
+            data: [1897, 898, 1024, 4336, 7676, 666, 8138],
+            backgroundColor: '#1a3950',
+            borderColor: '#000',
+
+        }]
+    };
+
+    const config4 = {
+        type: 'radar',
+        data: data4,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Movimento de Pessoas por dia'
+                }
+            }
+        },
+    };
+
+
+
+    // Gráfico de Linhas 2 - refere-se a Permanência de clientes por data no shopping
+    //Sugestão de Kpi's = Maior Permanência,Menor Permanência e Média de Frequência.
+
+
+    const labels5 = [
+        '01/01/2023',
+        '02/01/2023',
+        '03/01/2023',
+        '04/01/2023',
+        '05/01/2023',
+        '06/01/2023',
+    ];
+
+    const data5 = {
+        labels: labels5,
+        datasets: [{
+            label: 'Permanência de Pessoas no Shopping',
+            data: [90, 85, 88, 145, 164, 67, 34],
+            backgroundColor: '#1a3950',
+            borderColor: '#000',
+
+        }]
+    };
+
+    const config5 = {
+        type: 'line',
+        data: data5,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Permanência de Pessoas em (minutos)'
+                }
+            }
+        },
+    };
+
+</script>
+
+<script>
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+
+    const myChart4 = new Chart(
+        document.getElementById('myChart4'),
+        config4
+    );
+
+    const myChart5 = new Chart(
+        document.getElementById('myChart5'),
+        config5
+    );
+
+</script>

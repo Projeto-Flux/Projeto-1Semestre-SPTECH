@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jost:wght@100;400;600&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    background: linear-gradient(180deg, #070707 0%, rgb(9, 21, 64, 0.9) 100%);
+    overflow-x: hidden;
+    justify-content: center;
+    text-align: justify;
+}
+
+.logo {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    color: #000;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+#calculadora {
+    width: 100%;
+    height: 923px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.container {
+    height: 70px;
+    font-size: 12px;
+    font-weight: bold;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 90px;
+}
+
+.container p {
+    height: 10px;
+}
+
+.calc {
+    padding: 50px;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(1000px);
+    justify-content: space-evenly;
+    
+}
+
+.inputCalc {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space;
+    color: #000;
+    font-size: 16px;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    text-align: justify;
+}
+
+input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    height: 15px;
+    border: 1px solid#ccc;
+    border-radius: 50px;
+    background-color: fdfdfd;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    align-content: center;
+    align-items: center;
+}
+
+button {
+    display: flex;
+    border: 0;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: fdfdfd;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    color: #366b97;
+    width: 120px;
+    transition: 0.5s;
+    outline: 0;
+    height: 25px;
+}
+
+button:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.calc p {
+    color: #ffffff;
+}
+
+.inputCalc p {
+    color: #ffffff;
+}
+
+#calculadora video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1080px;
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: -10;
+    background: rgb(130, 156, 188);
+    background: linear-gradient(180deg, rgba(130, 156, 188, 0) 0%, rgba(130, 156, 188, 1) 100%);
+}
+
+#div_resultado {
+    width: 90%;
+    height: 90%;
+    color: #ffffff;
+    text-align: justify;
+}

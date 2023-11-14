@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Flux - Login</title>
+    <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+    <section id="up"></section>
+    <section id="down"></section>
+    <section id="left"></section>
+    <section id="right"></section>
+    <section id="login">
+        <div class="form-box">
+            <div class="form-value">
+                <div>
+                    <h2>Login</h2>
+
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required id="email_form">
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required id="senha_form">
+                        <label for="">Senha</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Lembrar de mim <a href="#">Esqueci a senha</a></label>
+
+                    </div>
+                    <button onclick="logar()">Log in</button>
+                    <div class="register">
+                        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+<script>
+
+
+
+
+    function logar() {
+        var entradaEmail = email_form.value;
+        var entradaSenha = senha_form.value;
+
+        if (entradaEmail === 'jkiguatemi@jkiguatemi.com' && entradaSenha === 'jkiguatemi@') {
+            window.open("Dashboard.html");
+
+        } else if (entradaEmail === 'tieteplaza@tieteplaza.com' && entradaSenha === 'tieteplaza@') {
+            window.open("Dashboard.html");
+
+        } else if (entradaEmail == 'shoppingguaianazes@shoppingguaianazes.com' && entradaSenha == 'shoppingguaianazes@') {
+            window.open("Dashboard.html");
+
+        } else alert(`Usuário não encontrado`)
+        function entrar() {
+        aguardar();
+
+            // web-data-viz
+        if (entradaEmail == "" || entradaSenha == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        console.log("FORM LOGIN: ", entradaEmail);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: entradaEmail,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+            return false;
+        }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+    }
+</script>
+
+</html>

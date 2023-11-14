@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/login.css">
+    <title>Flux - Cadastro</title>
+</head>
+
+<body>
+    <section id="up"></section>
+    <section id="down"></section>
+    <section id="left"></section>
+    <section id="right"></section>
+    <section id="login">
+        <div class="form-boxCadastro">
+            <div class="form-valueCadastro">
+                <div>
+                    <h2>CADASTRE-SE</h2>
+                    <!-- <div class="inputboxCadastro">
+                        <span>Empresa:</span>
+                        <select name="empresas" id="empresa_form">
+                        <option selected>Selecione uma empresa</option>
+                        </select>
+                    </div> -->
+                    <div class="inputboxCadastro">
+                        <ion-icon name="text-outline"></ion-icon>
+                        <input type="name" required id="nome_form">
+                        <label for="">Nome</label>
+                        <span id="nomeInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="briefcase"></ion-icon>
+                        <input type="text" required id="cnpj_form">
+                        <label for="">CNPJ</label>
+                        <span id="CNPJInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="location"></ion-icon>
+                        <input type="name" required id="cep_form">
+                        <label for="">CEP</label>
+                        <span id="nomeInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="location"></ion-icon>
+                        <input type="name" required id="num_form">
+                        <label for="">Numero</label>
+                        <span id="nomeInvalido"></span>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required id="email_form">
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required id="senha_form">
+                        <label for="">Senha</label>
+                    </div>
+                    <div class="inputboxCadastro">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required id="confirm_form">
+                        <label for="">Confirmar senha</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Lembrar de mim
+                    </div>
+                    <button onclick="Cadastrar()">Cadastrar</button>
+                    <div class="register">
+                        <p>Já possuí uma conta? <a href="login.html">Faça login</a></p>
+                    </div>
+                    <div class="voltar">
+                        <p><a href="index.html">Voltar ao inicio</a></p>
+                    </div>
+                </div>
+                <span id="mensagem_erro"></span>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/7b9aff81d8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<script>
+
+    function Cadastrar() {
+
+        // var entradaEmpresa = empresa_form.value;
+        var entradaNome = nome_form.value;
+        var entradaEmail = email_form.value;
+        var entradaSenha = senha_form.value;
+        var entradaCNPJ = cnpj_form.value;
+        var entradaNumero = num_form.value;
+        var entradaCEP = cep_form.value;
+        var confirmSenha = confirm_form.value;
+
+
+        // web-data-viz
+
+    // if (entradaNome.length < 1) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Nome precisa ser maior)";
+    //   finalizarAguardar();
+    //   return false;
+    // }
+    //   else if (entradaEmail.indexOf ('@') < 0 && entradaEmail.endsWith != '.com' ) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Preencha o email de forma correta utilizando '@' e '.com')";
+    //     finalizarAguardar();
+    //   return false;
+    //   } else if (senhaVar < 6) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Sua senha deve haver mais caracteres)";
+    //     finalizarAguardar();
+    //   return false;
+    //   } else if (confirmacaoSenhaVar == senhaVar) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Preencha sua senha corretamente)";
+    //     finalizarAguardar();
+    //   return false;
+    //   } else if (entradaCNPJ.length != 11) {
+    //   cardErro.stylentradaSenhay = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Preencha seu CPF corretamente)";
+    //     finalizarAguardar();
+    //   return false;
+    //   }else {
+    //   setInterval(sumirMensagem, 5000);
+    // }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: entradaNome,
+        emailServer: entradaEmail,
+        cnpjServer: entradaCNPJ,
+        senhaServer: entradaSenha,
+        cepServer: entradaCEP,
+        numeroServer: entradaNumero
+        // entradaEmpresa: entradaEmpresa
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          // setTimeout(() => {
+          //   window.location = "login.html";
+          // }, "2000");
+
+          // limparFormulario();
+          // finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
+
+//   function listar() {
+//     fetch("/empresas/listar", {
+//       method: "GET",
+//     })
+//       .then(function (resposta) {
+//         resposta.json().then((empresas) => {
+//           empresas.forEach((empresa) => {
+//             empresa_form.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
+//           });
+//         });
+//       })
+//       .catch(function (resposta) {
+//         console.log(`#ERRO: ${resposta}`);
+//       });
+//   }
+
+//   function sumirMensagem() {
+//     cardErro.style.display = "none";
+
+// }
+    
+</script>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Jost:wght@100;400;600&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
+
+/* font-family: 'Fira Sans Condensed', sans-serif; */
+/* font-family: 'PT Sans', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(80deg, #133549, #000e18);
+}
+
+#up {
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #174158, #1c252980);
+    filter: blur(150px);
+    animation: down 40s infinite;
+    z-index: -10;
+}
+
+#down {
+    position: absolute;
+    right: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #1e3d5ccc, #2c3c4d80);
+    filter: blur(200px);
+    animation: up 30s infinite;
+    z-index: -10;
+}
+
+#left {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, rgb(11, 66, 88), #120205cc);
+    filter: blur(180px);
+    animation: left 30s 1s infinite;
+    z-index: -10;
+}
+
+#right {
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-image: linear-gradient(80deg, #173b50, #002d4d);
+    filter: blur(80px);
+    animation: right 40s .5s infinite;
+    z-index: -10;
+}
+
+/* @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #efefef4d;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.cad .container .card img {
+    margin-top: 500px;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.box {
+    padding: 20px;
+    width: 1200px;
+    height: 800px;
+    background-color: #efefef4d;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+
+.aqui {
+    font-weight: bold;
+}
+
