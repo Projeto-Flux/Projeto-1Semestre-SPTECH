@@ -52,33 +52,21 @@
     function logar() {
         var entradaEmail = email_form.value;
         var entradaSenha = senha_form.value;
+        console.log("a")
 
-        if (entradaEmail === 'jkiguatemi@jkiguatemi.com' && entradaSenha === 'jkiguatemi@') {
-            window.open("Dashboard.html");
-
-        } else if (entradaEmail === 'tieteplaza@tieteplaza.com' && entradaSenha === 'tieteplaza@') {
-            window.open("Dashboard.html");
-
-        } else if (entradaEmail == 'shoppingguaianazes@shoppingguaianazes.com' && entradaSenha == 'shoppingguaianazes@') {
-            window.open("Dashboard.html");
-
-        } else alert(`Usuário não encontrado`)
-        function entrar() {
-        aguardar();
+        // function entrar() {
+        // aguardar();
 
             // web-data-viz
         if (entradaEmail == "" || entradaSenha == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            finalizarAguardar();
+            // cardErro.style.display = "block"
+            // mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
             return false;
-        }
-        else {
-            setInterval(sumirMensagem, 5000)
         }
 
         console.log("FORM LOGIN: ", entradaEmail);
-        console.log("FORM SENHA: ", senhaVar);
+        console.log("FORM SENHA: ", entradaSenha);
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -87,7 +75,7 @@
             },
             body: JSON.stringify({
                 emailServer: entradaEmail,
-                senhaServer: senhaVar
+                senhaServer: entradaSenha
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -101,10 +89,9 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
-
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "../Dashboard.html";
+                        console.log("teste")
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -115,7 +102,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    // finalizarAguardar(texto);
                 });
             }
 
@@ -126,10 +113,10 @@
             return false;
         }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-    }
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+    // }
 </script>
 
 </html>

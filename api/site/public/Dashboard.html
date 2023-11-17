@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="css/dash.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="icon" href="assets/imgs/Logo 3.png" type="image/x-icon">
+    <script src="js/sessao.js"></script>
 </head>
 
-<body>
+<body onload="validarSessao()">
     <div class="container">
         <div class="topbar">
             <div class="logo">
@@ -23,6 +24,7 @@
             <i class="fa-solid fa-list"></i>
             <div class="user">
                 <img src="Design/main/website/user.svg" alt="">
+                <span id="b_usuario"></span>
             </div>
         </div>
         <div class="sidebar">
