@@ -21,7 +21,7 @@ var sql = require('mssql');
 var mySqlConfig = {
     host: "localhost",
     database: "flux",
-    user: "root",
+    user: "fluxInsert",
     password: "Pereira2004",
 };
 

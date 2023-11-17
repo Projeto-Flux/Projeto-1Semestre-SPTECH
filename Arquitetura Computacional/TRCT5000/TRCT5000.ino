@@ -12,3 +12,4 @@ void loop() {
   Serial.println(leitura);
   delay(500);
 }
+                  
