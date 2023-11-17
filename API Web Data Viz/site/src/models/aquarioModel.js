@@ -1,23 +1,13 @@
-var database = require("../database/config");
+var database = require("../database/config")
 
-function buscarAquariosPorEmpresa(empresaId) {
-
-  instrucaoSql = `select * from aquario a where fk_empresa = ${empresaId}`;
-
-  console.log("Executando a instrução SQL: \n" + instrucaoSql);
-  return database.executar(instrucaoSql);
+function coletarFluxo() {
+  var instrucaoColetarFluxo = `
+      select count(sensor1) as qtdPresenca from dadosFluxo where sensor1 = 1;
+  `
+  console.log("Executando a instrução coletar fluxo: \n "+(database.executar(instrucaoColetarFluxo)));
+  return database.executar(instrucaoColetarFluxo);
 }
-
-function cadastrar(empresaId, descricao) {
-  
-  instrucaoSql = `insert into (descricao, fk_empresa) aquario values (${descricao}, ${empresaId})`;
-
-  console.log("Executando a instrução SQL: \n" + instrucaoSql);
-  return database.executar(instrucaoSql);
-}
-
 
 module.exports = {
-  buscarAquariosPorEmpresa,
-  cadastrar
-}
+  coletarFluxo
+};

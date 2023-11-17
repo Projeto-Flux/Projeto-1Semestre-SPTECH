@@ -1,11 +1,11 @@
-// var express = require("express");
-// var router = express.Router();
+var express = require("express");
+var router = express.Router();
 
-// var aquarioController = require("../controllers/aquarioController");
+var dashboardController = require("../controllers/dashboardController");
 
-// router.get("/:empresaId", function (req, res) {
-//   aquarioController.buscarAquariosPorEmpresa(req, res);
-// });
+router.get("/:fluxo", function (req, res) {
+    dashboardController.coletarQtdTotal(req,res);
+});
 
 // router.post("/cadastrar", function (req, res) {
 //   aquarioController.cadastrar(req, res);

@@ -77,7 +77,7 @@
             <div class="cards">
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">2.678</div>
+                        <div class="number" id="qtd_presenca">2.678</div>
                         <div class="card-name">Pessoas</div>
                     </div>
                     <div class="icon-box">
@@ -142,6 +142,8 @@
     // Gráfico de Barras - refere-se a quantidade de zonas no shopping
     //Sugestão de Kpi's = Zona mais lotada, Zona mais Vazia, Média de Pessoas e Total de Pessoas.
 
+    var qtd_presenca = document.getElementById("qtd_presenca");
+
 
     const labels = [
         'Alpha',
@@ -157,7 +159,7 @@
         labels: labels,
         datasets: [{
             label: 'Pessoas por Zona',
-            data: [320, 229, 500, 423, 368, 657, 181],
+            data: [],
             backgroundColor: '#1a3950',
             borderColor: '#a5efd3',
 
@@ -196,7 +198,7 @@
         labels: labels2,
         datasets: [{
             label: 'Ocupação Atual do Shopping',
-            data: [1.217, 2.678],
+            data: [],
             backgroundColor: [
                 'rgb(26, 57, 80, 0.5)',
                 'rgb(26, 57, 80)'
@@ -236,4 +238,50 @@
         document.getElementById('myChart2'),
         config2
     );
+
+    function updateGrafico(){
+        fetch("/aquario/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: entradaEmail,
+                senhaServer: entradaSenha
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    setTimeout(function () {
+                        window.location = "../Dashboard.html";
+                        console.log("teste")
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+            return false;
+        }
 </script>
