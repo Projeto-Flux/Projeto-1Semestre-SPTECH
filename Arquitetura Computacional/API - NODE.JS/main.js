@@ -26,10 +26,10 @@ const serial = async (
     if (AMBIENTE == 'desenvolvimento') {
         poolBancoDados = mysql.createPool(
             {
-                // altere!
+                // altere!noom
                 // CREDENCIAIS DO BANCO - MYSQL WORKBENCH
-                host: 'localhost',
-                user: 'insertGrupo02',
+                host: '10.18.32.163',
+                user: 'insertGrupo2',
                 password: 'flux123',
                 database: 'flux'
             }
