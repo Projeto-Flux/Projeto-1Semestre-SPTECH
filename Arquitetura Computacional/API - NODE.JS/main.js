@@ -28,8 +28,8 @@ const serial = async (
             {
                 // altere!noom
                 // CREDENCIAIS DO BANCO - MYSQL WORKBENCH
-                host: '10.18.32.163',
-                user: 'insertGrupo2',
+                host: '10.18.34.120',
+                user: 'insertGrupo02',
                 password: 'flux123',
                 database: 'flux'
             }
