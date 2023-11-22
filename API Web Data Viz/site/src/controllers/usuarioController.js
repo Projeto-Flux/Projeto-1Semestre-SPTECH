@@ -120,10 +120,25 @@ function coletarZonaMaisMovimentada(req, res) {
         res.status(500).json({ error: "Erro interno do servidor" });
     });
 }
+
+function coletarZonas(req, res) {
+    var idShopping = req.query.idShopping;
+    
+    usuarioModel.coletarZonas(idShopping)
+    .then(result => {
+        res.status(200).json(result);
+    })
+    .catch(error => {
+        console.error("Erro ao processar a solicitação:", error);
+        res.status(500).json({ error: "Erro interno do servidor" });
+    });
+}
+
 module.exports = {
     autenticar,
     cadastrar,
     coletarFluxo,
     coletarModaHora,
-    coletarZonaMaisMovimentada
+    coletarZonaMaisMovimentada,
+    coletarZonas
 }

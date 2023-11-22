@@ -23,4 +23,8 @@ router.get("/coletarModaHora", function (req, res) {
 router.get("/coletarZonaMaisMovimentada", function (req, res) {
     usuarioController.coletarZonaMaisMovimentada(req, res);
 });
+
+router.get("/coletarZonas", function (req, res) {
+    usuarioController.coletarZonas(req, res);
+});
 module.exports = router;

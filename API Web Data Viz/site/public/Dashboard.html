@@ -196,6 +196,25 @@
         console.error("Erro no lado do cliente:", error);
     });
 
+    var listaZonas = [];
+
+    fetch(`/usuarios/coletarZonas?idShopping=${id}`)
+    .then(res => {
+        if (!res.ok) {
+            throw new Error(`Erro na solicitação: ${res.statusText}`);
+        }
+        return res.json();
+    })
+    .then(res => {
+        listaZonas = res;
+        for(var i = 0; i < listaZonas.length; i++){
+            console.log(listaZonas[i])
+        }
+    })
+    .catch(error => {
+        console.error("Erro no lado do cliente:", error);
+    });
+
 
     const labels = [
         'Alpha',
