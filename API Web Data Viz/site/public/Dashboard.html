@@ -144,6 +144,7 @@
 
     var qtd_presenca = document.getElementById("qtd_presenca");
     var id = sessionStorage.ID_USUARIO;
+    var qtdTotal = 0;
     console.log(id)
 
     fetch(`/usuarios/coletarFluxo?idShopping=${id}`)
@@ -154,7 +155,7 @@
         return res.json();
     })
     .then(res => {
-        var qtdTotal = res[0].presencaTotal; 
+        qtdTotal = res[0].presencaTotal; 
 
         qtd_presenca.innerHTML = `
             ${qtdTotal}
@@ -207,8 +208,21 @@
     })
     .then(res => {
         listaZonas = res;
+        var diferenca = 0;
+        var maior = 0;
+        var menor = 100;
         for(var i = 0; i < listaZonas.length; i++){
-            console.log(listaZonas[i])
+            diferenca = (listaZonas[i].zonaPresenca / qtdTotal) * 100;
+            if(diferenca > maior){
+                maior = diferenca;
+            }
+            if(diferenca < menor){
+                menor = diferenca;
+            }
+            console.log(diferenca)
+        }
+        if(maior > 80){
+            console.log("Alerta vermelho")
         }
     })
     .catch(error => {
