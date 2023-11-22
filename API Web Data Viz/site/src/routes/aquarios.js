@@ -3,7 +3,7 @@ var router = express.Router();
 
 var dashboardController = require("../controllers/dashboardController");
 
-router.get("/:fluxo", function (req, res) {
+router.get("/coletarTotal", function (req, res) {
     dashboardController.coletarQtdTotal(req,res);
 });
 
@@ -11,4 +11,4 @@ router.get("/:fluxo", function (req, res) {
 //   aquarioController.cadastrar(req, res);
 // })
 
-// module.exports = router;
+module.exports = router;

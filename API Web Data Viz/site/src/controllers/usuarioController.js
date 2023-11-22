@@ -15,13 +15,13 @@ function autenticar(req, res) {
                     if (resultadoAutenticar.length == 1) {
                         console.log(resultadoAutenticar);
                                     res.json({
-                                        id: resultadoAutenticar[0].id,
+                                        id: resultadoAutenticar[0].idShopping,
                                         email: resultadoAutenticar[0].email,
                                         cnpj: resultadoAutenticar[0].cnpj,
                                         nome: resultadoAutenticar[0].nome,
                                         senha: resultadoAutenticar[0].senha
                                     });
-                                 
+                                
                                     
                             
                     }
@@ -82,7 +82,48 @@ function cadastrar(req, res) {
     }
 }
 
+function coletarFluxo(req, res) {
+    var idShopping = req.query.idShopping;
+
+    usuarioModel.coletarFluxo(idShopping)
+        .then(result => {
+            res.status(200).json(result);
+        })
+        .catch(error => {
+            console.error("Erro ao processar a solicitação:", error);
+            res.status(500).json({ error: "Erro interno do servidor" });
+        });
+
+}
+function coletarModaHora(req, res) {
+    var idShopping = req.query.idShopping;
+
+    usuarioModel.coletarModaHora(idShopping)
+    .then(result => {
+        res.status(200).json(result);
+    })
+    .catch(error => {
+        console.error("Erro ao processar a solicitação:", error);
+        res.status(500).json({ error: "Erro interno do servidor" });
+    });
+}
+
+function coletarZonaMaisMovimentada(req, res) {
+    var idShopping = req.query.idShopping;
+    
+    usuarioModel.coletarZonaMaisMovimentada(idShopping)
+    .then(result => {
+        res.status(200).json(result);
+    })
+    .catch(error => {
+        console.error("Erro ao processar a solicitação:", error);
+        res.status(500).json({ error: "Erro interno do servidor" });
+    });
+}
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    coletarFluxo,
+    coletarModaHora,
+    coletarZonaMaisMovimentada
 }

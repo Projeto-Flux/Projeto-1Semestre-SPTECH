@@ -86,7 +86,7 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">Ω (omega)</div>
+                        <div class="number" id="zonaMaisMovimentada">Ω (omega)</div>
                         <div class="card-name">Zona mais movimentada</div>
                     </div>
                     <div class="icon-box">
@@ -104,7 +104,7 @@
                 </div>
                 <div class="card">
                     <div class="card-content">
-                        <div class="number">13h</div>
+                        <div class="number" id="modaHora">13h</div>
                         <div class="card-name">Hora mais movimentada</div>
                     </div>
                     <div class="icon-box">
@@ -143,6 +143,58 @@
     //Sugestão de Kpi's = Zona mais lotada, Zona mais Vazia, Média de Pessoas e Total de Pessoas.
 
     var qtd_presenca = document.getElementById("qtd_presenca");
+    var id = sessionStorage.ID_USUARIO;
+    console.log(id)
+
+    fetch(`/usuarios/coletarFluxo?idShopping=${id}`)
+    .then(res => {
+        if (!res.ok) {
+            throw new Error(`Erro na solicitação: ${res.statusText}`);
+        }
+        return res.json();
+    })
+    .then(res => {
+        var qtdTotal = res[0].presencaTotal; 
+
+        qtd_presenca.innerHTML = `
+            ${qtdTotal}
+        `;
+    })
+    .catch(error => {
+        console.error("Erro no lado do cliente:", error);
+    });
+
+    fetch(`/usuarios/coletarModaHora?idShopping=${id}`)
+    .then(res => {
+        if (!res.ok) {
+            throw new Error(`Erro na solicitação: ${res.statusText}`);
+        }
+        return res.json();
+    })
+    .then(res => {
+        var modaHorario = res[0].hora; 
+
+        modaHora.innerHTML = `${modaHorario}h`
+    })
+    .catch(error => {
+        console.error("Erro no lado do cliente:", error);
+    });
+
+    fetch(`/usuarios/coletarZonaMaisMovimentada?idShopping=${id}`)
+    .then(res => {
+        if (!res.ok) {
+            throw new Error(`Erro na solicitação: ${res.statusText}`);
+        }
+        return res.json();
+    })
+    .then(res => {
+        var zona = res[0].zonaMaisMovimentada; 
+
+        zonaMaisMovimentada.innerHTML = `${zona}`
+    })
+    .catch(error => {
+        console.error("Erro no lado do cliente:", error);
+    });
 
 
     const labels = [
@@ -260,7 +312,7 @@
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_SHOPPING = json.id;
                     setTimeout(function () {
                         window.location = "../Dashboard.html";
                         console.log("teste")
