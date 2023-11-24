@@ -28,8 +28,8 @@ const serial = async (
             {
                 // altere!noom
                 // CREDENCIAIS DO BANCO - MYSQL WORKBENCH
-                host: '10.18.34.120',
-                user: 'insertGrupo02',
+                host: '10.18.35.191',
+                user: 'arduino',
                 password: 'flux123',
                 database: 'flux'
             }
@@ -61,10 +61,10 @@ const serial = async (
         const valores = data.split(';');
          const chave = parseInt(valores[0]);
         
-        const chave2 = Math.round(1.3 * chave);
-        const chave3 = Math.round(0.7 * chave);
-        const chave4 = Math.round(1.8 * chave2);
-        const chave5 = Math.round(2.1 * chave3);
+        // const chave2 = Math.round(1.3 * chave);
+        // const chave3 = Math.round(0.7 * chave);
+        // const chave4 = Math.round(1.8 * chave2);
+        // const chave5 = Math.round(2.1 * chave3);
 
         valoresChave.push(chave);
 
@@ -75,7 +75,7 @@ const serial = async (
                 // -> altere nome da tabela e colunas se necessário
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> Importante! você deve ter o aquario de id 1 cadastrado.
-                sqlquery = `INSERT INTO dadosFluxo (sensor5, sensor4, sensor3, sensor2, sensor1,horaDia, fkSensor) VALUES (${chave5}, ${chave4}, ${chave3}, ${chave2}, ${chave}, CURRENT_TIMESTAMP, 1)`;
+                sqlquery = `INSERT INTO dadosFluxo ( presenca,horaDia, fkSensor) VALUES ( ${chave}, CURRENT_TIMESTAMP, 1)`;
 
                 // CREDENCIAIS DO BANCO REMOTO - SQL SERVER
                 // Importante! você deve ter criado o usuário abaixo com os comandos presentes no arquivo
@@ -84,7 +84,7 @@ const serial = async (
 
                 function inserirComando(conn, sqlquery) {
                     conn.query(sqlquery);
-                    console.log("valores inseridos no banco: ", chave5 + ", " + chave4 + ", " + chave3 + ", " + chave2 + ", " + chave)
+                    // console.log("valores inseridos no banco: ", chave5 + ", " + chave4 + ", " + chave3 + ", " + chave2 + ", " + chave)
                 }
 
                 sql.connect(connStr)
@@ -99,10 +99,9 @@ const serial = async (
                 // Este insert irá inserir dados de fk_aquario id=1 (fixo no comando do insert abaixo)
                 // >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    'INSERT INTO dadosFluxo (sensor5, sensor4, sensor3, sensor2, sensor1,horaDia, fkSensor) VALUES (?, ?, ?, ?, ?, now(), 1)',
-                    [chave5, chave4, chave3, chave2, chave]
+                    `INSERT INTO dadosFluxo (presenca, horaDia, fkSensor) VALUES (${chave}, now(), 1)`
                 );
-                console.log("valores inseridos no banco: ", chave5 + ", " + chave4 + ", " + chave3 + ", " + chave2 + ", " + chave)
+                // console.log("valores inseridos no banco: ", chave5 + ", " + chave4 + ", " + chave3 + ", " + chave2 + ", " + chave)
 
             } else {
                 throw new Error('Ambiente não configurado. Verifique o arquivo "main.js" e tente novamente.');
