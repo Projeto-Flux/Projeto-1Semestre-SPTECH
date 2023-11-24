@@ -11,7 +11,7 @@
     <script src="js/sessao.js"></script>
 </head>
 
-<body onload="validarSessao()">
+<body onload="validarSessao(),gerarGraficos()">
     <div class="container">
         <div class="topbar">
             <div class="logo">
@@ -147,6 +147,10 @@
     var qtdTotal = 0;
     console.log(id)
 
+setInterval(gerarGraficos,3000);
+function gerarGraficos(){
+
+
     fetch(`/usuarios/coletarFluxo?idShopping=${id}`)
     .then(res => {
         if (!res.ok) {
@@ -228,7 +232,7 @@
     .catch(error => {
         console.error("Erro no lado do cliente:", error);
     });
-
+}
 
     const labels = [
         'Alpha',
