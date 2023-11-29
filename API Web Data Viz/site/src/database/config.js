@@ -22,7 +22,7 @@ var mySqlConfig = {
     host: "localhost",
     database: "flux",
     user: "root",
-    password: "20071511",
+    password: "145514",
 };
 
 function executar(instrucao) {

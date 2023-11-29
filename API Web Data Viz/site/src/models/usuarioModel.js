@@ -69,13 +69,14 @@ function coletarZonas(idShopping){
     select z.nome, count(presenca) as zonaPresenca from shopping as s join zona as z on idShopping = fkShopping 
     join sensor as se on idzona = fkZona 	
     join dadosFluxo as df on idSensor = fkSensor 
-    where presenca = 1 and fkShopping = 1
+    where presenca = 1 and fkShopping = ${idShopping}
     group by z.nome;
     `
 
     console.log("Executando a instrução coletar fluxo: \n " + (database.executar(instrucaoColetarFluxo)));
     return database.executar(instrucaoColetarFluxo);
 }
+
 
 
 module.exports = {

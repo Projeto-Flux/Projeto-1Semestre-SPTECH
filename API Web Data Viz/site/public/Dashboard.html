@@ -146,6 +146,9 @@
     var id = sessionStorage.ID_SHOPPING;
     var qtdTotal = 0;
     console.log(id)
+    var listaZonas = [];
+    var listaNomesZonas = [];
+    var listaDadosZonas = [];
 
 setInterval(gerarGraficos,3000);
 function gerarGraficos(){
@@ -201,7 +204,7 @@ function gerarGraficos(){
         console.error("Erro no lado do cliente:", error);
     });
 
-    var listaZonas = [];
+    
 
     fetch(`/usuarios/coletarZonas?idShopping=${id}`)
     .then(res => {
@@ -225,6 +228,7 @@ function gerarGraficos(){
             }
             console.log(diferenca)
         }
+        console.log(sessionStorage.listaZonas[0].nome)
         if(maior > 80){
             console.log("Alerta vermelho")
         }
@@ -233,22 +237,24 @@ function gerarGraficos(){
         console.error("Erro no lado do cliente:", error);
     });
 }
+setTimeout(()=>{
+    PlotarGraficoBarra()
+}, 1000)
+function PlotarGraficoBarra(){
+    for(var i = 0; i < listaZonas.length; i++){
 
-    const labels = [
-        'Alpha',
-        'Beta',
-        'Delta',
-        'Epilson',
-        'Sigma',
-        'Omega',
-        'Teta',
-    ];
+        listaNomesZonas.push(listaZonas[i].nome)
+        listaDadosZonas.push(listaZonas[i].zonaPresenca)
+    }
+    const labels = 
+        listaNomesZonas
+    ;
 
     const data = {
         labels: labels,
         datasets: [{
             label: 'Pessoas por Zona',
-            data: [],
+            data: [listaDadosZonas],
             backgroundColor: '#1a3950',
             borderColor: '#a5efd3',
 
@@ -272,17 +278,16 @@ function gerarGraficos(){
         }
     };
 
-
-
-    // Gráfico de Pizza - refere-se a ocupação total do shopping
-    //Sugestão de Kpi's = Porcentagem de Ocupação de Pessoas,Porcentagem Ocupação Livre de Pessoas e Total de Pessoas.
-
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
 
     const labels2 = [
         'Livre',
         'Ocupado',
     ];
-
+    
     const data2 = {
         labels: labels2,
         datasets: [{
@@ -293,10 +298,10 @@ function gerarGraficos(){
                 'rgb(26, 57, 80)'
             ],
             borderColor: '#000',
-
+            
         }]
     };
-
+    
     const config2 = {
         type: 'pie',
         data: data2,
@@ -313,20 +318,27 @@ function gerarGraficos(){
             }
         },
     };
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+        );
+}
+
+
+
+    // Gráfico de Pizza - refere-se a ocupação total do shopping
+    //Sugestão de Kpi's = Porcentagem de Ocupação de Pessoas,Porcentagem Ocupação Livre de Pessoas e Total de Pessoas.
+
+
+   
     // Gráfico de Linhas - refere- se ao movimento de pessoas por hora do dia
     //Sugestão de Kpi's = Horário de Pico,Horário mais vazio, Média de Pessoas e Total de Pessoas.
 </script>
 
 <script>
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-    );
+    
 
-    const myChart2 = new Chart(
-        document.getElementById('myChart2'),
-        config2
-    );
+    
 
     function updateGrafico(){
         fetch("/aquario/", {
