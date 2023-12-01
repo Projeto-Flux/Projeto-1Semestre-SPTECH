@@ -133,6 +133,18 @@ function coletarZonas(req, res) {
         res.status(500).json({ error: "Erro interno do servidor" });
     });
 }
+function coletarCapacidadeTotal(req, res) {
+    var idShopping = req.query.idShopping;
+    
+    usuarioModel.coletarCapacidadeTotal(idShopping)
+    .then(result => {
+        res.status(200).json(result);
+    })
+    .catch(error => {
+        console.error("Erro ao processar a solicitação:", error);
+        res.status(500).json({ error: "Erro interno do servidor" });
+    });
+}
 
 module.exports = {
     autenticar,
@@ -140,5 +152,6 @@ module.exports = {
     coletarFluxo,
     coletarModaHora,
     coletarZonaMaisMovimentada,
-    coletarZonas
+    coletarZonas,
+    coletarCapacidadeTotal
 }

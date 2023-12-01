@@ -27,10 +27,11 @@ function cadastrar(nomeServer, emailServer, cnpjServer, senhaServer, cepServer, 
 
 function coletarFluxo(idShopping) {
     var instrucaoColetarFluxo = `
-    select count(presenca) as presencaTotal from shopping as s join zona as z on idShopping = fkShopping
+    select count(presenca) as presencaTotal from shopping as s  right join zona as z on idShopping = fkShopping
 	join sensor as se on idzona = fkZona
     join dadosFluxo as df on idSensor = fkSensor
-	where presenca = 1 and fkShopping = ${idShopping};
+	where presenca = 1 and fkShopping = ${idShopping} and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now()) and hour(horadia) >= hour(now()-1) ;
+
     `
 
     console.log("Executando a instrução coletar fluxo: \n " + (database.executar(instrucaoColetarFluxo)));
@@ -42,7 +43,7 @@ function coletarModaHora(idShopping) {
     select hour(df.horaDia) as hora, count(*) as quantidade from shopping as s join zona as z on idShopping = fkShopping
 	join sensor as se on idzona = fkZona
     join dadosFluxo as df on idSensor = fkSensor
-    where presenca = 1 and idShopping = ${idShopping}
+    where presenca = 1 and idShopping = ${idShopping} and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now())
     group by hora order by quantidade desc limit 1; -- limit 1 é para selecionar apenas o primeiro valor que no caso será o maior
     `
 
@@ -55,8 +56,10 @@ function coletarZonaMaisMovimentada(idShopping){
     select z.nome as zonaMaisMovimentada, count(presenca) as zonaPresenca from shopping as s join zona as z on idShopping = fkShopping 
 		join sensor as se on idzona = fkZona 	
         join dadosFluxo as df on idSensor = fkSensor 
-        where presenca = 1 and fkShopping = ${idShopping}
+        where presenca = 1 and fkShopping = ${idShopping} and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now())
         group by z.nome
+        order by zonaPresenca
+        desc
         limit 1;
     `
 
@@ -69,8 +72,17 @@ function coletarZonas(idShopping){
     select z.nome, count(presenca) as zonaPresenca from shopping as s join zona as z on idShopping = fkShopping 
     join sensor as se on idzona = fkZona 	
     join dadosFluxo as df on idSensor = fkSensor 
-    where presenca = 1 and fkShopping = ${idShopping}
+    where presenca = 1 and fkShopping = ${idShopping} and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now()) and hour(horadia) >= hour(now()-1) 
     group by z.nome;
+    `
+
+    console.log("Executando a instrução coletar fluxo: \n " + (database.executar(instrucaoColetarFluxo)));
+    return database.executar(instrucaoColetarFluxo);
+}
+
+function coletarCapacidadeTotal(idShopping){
+    var instrucaoColetarFluxo = `
+    select sum(capacidade) capacidadeTotal from zona join shopping on fkShopping = idShopping where idShopping = ${idShopping};
     `
 
     console.log("Executando a instrução coletar fluxo: \n " + (database.executar(instrucaoColetarFluxo)));
@@ -85,5 +97,6 @@ module.exports = {
     coletarFluxo,
     coletarModaHora,
     coletarZonaMaisMovimentada,
-    coletarZonas
+    coletarZonas,
+    coletarCapacidadeTotal
 };

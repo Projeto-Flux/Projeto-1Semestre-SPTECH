@@ -78,7 +78,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="number" id="qtd_presenca">2.678</div>
-                        <div class="card-name">Pessoas</div>
+                        <div class="card-name">Presenças na última hora</div>
                     </div>
                     <div class="icon-box">
                         <i class="fas fa-user-graduate" id="i"></i>
@@ -87,7 +87,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="number" id="zonaMaisMovimentada">Ω (omega)</div>
-                        <div class="card-name">Zona mais movimentada</div>
+                        <div class="card-name">Zona mais movimentada hoje</div>
                     </div>
                     <div class="icon-box">
                         <i class="Ω" id="i"></i>
@@ -105,7 +105,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="number" id="modaHora">13h</div>
-                        <div class="card-name">Hora mais movimentada</div>
+                        <div class="card-name">Hora mais movimentada hoje</div>
                     </div>
                     <div class="icon-box">
                         <i class="fas fa-dollar-sign" id="i"></i>
@@ -114,13 +114,13 @@
             </div>
             <div class="charts">
                 <div class="chart">
-                    <h2>Ocupação atual do Shopping</h2>
+                    <h2>Ocupação atual do Shopping em %</h2>
                     <div class="graficos">
                         <canvas id="myChart2"></canvas>
                     </div>
                 </div>
                 <div class="chart">
-                    <h2>Pessoas por Zona</h2>
+                    <h2>Pessoas por Zona na última hora</h2>
                     <div class="graficos">
                         <canvas id="myChart"></canvas>
                     </div>
@@ -149,6 +149,9 @@
     var listaZonas = [];
     var listaNomesZonas = [];
     var listaDadosZonas = [];
+    var capacidadeTotal = 0
+    var capacidadeLivre = 100
+    var capacidadeOcupada = 0
 
 setInterval(gerarGraficos,3000);
 function gerarGraficos(){
@@ -236,10 +239,30 @@ function gerarGraficos(){
     .catch(error => {
         console.error("Erro no lado do cliente:", error);
     });
+
+    fetch(`/usuarios/coletarCapacidadeTotal?idShopping=${id}`)
+    .then(res => {
+        if (!res.ok) {
+            throw new Error(`Erro na solicitação: ${res.statusText}`);
+        }
+        return res.json();
+    })
+    .then(res => {
+         capacidadeTotal = Number(res[0].capacidadeTotal) 
+    })
+    .catch(error => {
+        console.error("Erro no lado do cliente:", error);
+    });
+
+    capacidadeOcupada = (qtdTotal / capacidadeTotal) * 100
+    capacidadeLivre = 100 - capacidadeOcupada
+    
 }
-setTimeout(()=>{
+
+
+setInterval(()=>{
     PlotarGraficoBarra()
-}, 1000)
+}, 3000)
 function PlotarGraficoBarra(){
     for(var i = 0; i < listaZonas.length; i++){
 
@@ -254,7 +277,7 @@ function PlotarGraficoBarra(){
         labels: labels,
         datasets: [{
             label: 'Pessoas por Zona',
-            data: [listaDadosZonas],
+            data: [listaDadosZonas[0], listaDadosZonas[1], listaDadosZonas[2]],
             backgroundColor: '#1a3950',
             borderColor: '#a5efd3',
 
@@ -292,7 +315,7 @@ function PlotarGraficoBarra(){
         labels: labels2,
         datasets: [{
             label: 'Ocupação Atual do Shopping',
-            data: [],
+            data: [parseInt(capacidadeLivre) ,parseInt(capacidadeOcupada)],
             backgroundColor: [
                 'rgb(26, 57, 80, 0.5)',
                 'rgb(26, 57, 80)'
@@ -384,5 +407,17 @@ function PlotarGraficoBarra(){
         })
 
             return false;
+        }
+        // atualizar o alarme
+        function atualizarAlarme(){
+            if (condition) {
+                
+            }
+            else if (condition) {
+                
+            }
+            else{
+
+            }
         }
 </script>

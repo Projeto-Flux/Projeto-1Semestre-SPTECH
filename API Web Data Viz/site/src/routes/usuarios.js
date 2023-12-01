@@ -27,4 +27,8 @@ router.get("/coletarZonaMaisMovimentada", function (req, res) {
 router.get("/coletarZonas", function (req, res) {
     usuarioController.coletarZonas(req, res);
 });
+
+router.get("/coletarCapacidadeTotal", function (req, res) {
+    usuarioController.coletarCapacidadeTotal(req, res);
+});
 module.exports = router;
