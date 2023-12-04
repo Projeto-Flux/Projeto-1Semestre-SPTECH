@@ -69,11 +69,11 @@ function coletarZonaMaisMovimentada(idShopping){
 
 function coletarZonas(idShopping){
     var instrucaoColetarFluxo = `
-    select z.nome, count(presenca) as zonaPresenca from shopping as s join zona as z on idShopping = fkShopping 
+    select z.nome, count(presenca) as zonaPresenca, z.capacidade as capacidade from shopping as s join zona as z on idShopping = fkShopping 
     join sensor as se on idzona = fkZona 	
     join dadosFluxo as df on idSensor = fkSensor 
     where presenca = 1 and fkShopping = ${idShopping} and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now()) and hour(horadia) >= hour(now()-1) 
-    group by z.nome;
+    group by z.nome, z.capacidade  order by z.nome;
     `
 
     console.log("Executando a instrução coletar fluxo: \n " + (database.executar(instrucaoColetarFluxo)));

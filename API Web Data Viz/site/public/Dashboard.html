@@ -11,7 +11,7 @@
     <script src="js/sessao.js"></script>
 </head>
 
-<body onload="validarSessao(),gerarGraficos()">
+<body onload="validarSessao(),gerarGraficos(), primeiroGrafico()">
     <div class="container">
         <div class="topbar">
             <div class="logo">
@@ -32,7 +32,12 @@
                 <li>
                     <a href="#">
                         <i class="fa-solid fa-people-group" id="i"></i>
-                        <div>Zonas</div>
+                        <select id="select_zonas" onchange="selecionarZona()">
+                            <option value="0">Todas Zonas</option>
+                            <option value="1">Zona 1Alpha</option>
+                            <option value="2">Zona 1Beta</option>
+                            <option value="3">Zona 2Alpha</option>
+                        </select>
                     </a>
                 </li>
                 <li>
@@ -259,25 +264,46 @@ function gerarGraficos(){
     
 }
 
+var dados = []
+var labels = []
+var dados2 = []
+var verifica = false
 
 setInterval(()=>{
     PlotarGraficoBarra()
 }, 3000)
 function PlotarGraficoBarra(){
+    listaDadosZonas = []
+
     for(var i = 0; i < listaZonas.length; i++){
 
         listaNomesZonas.push(listaZonas[i].nome)
         listaDadosZonas.push(listaZonas[i].zonaPresenca)
     }
-    const labels = 
-        listaNomesZonas
-    ;
+
+    if(!verifica){
+        dados.push(listaDadosZonas[0], listaDadosZonas[1], listaDadosZonas[2])
+        labels = [listaNomesZonas[0],listaNomesZonas[1],listaNomesZonas[2]]
+        dados2.push(capacidadeOcupada, capacidadeLivre)
+        verifica = true
+    }
+
+
+    myChart.data.labels = labels;
+    myChart.data.datasets[0].data = dados;
+    myChart.update();
+
+    myChart2.data.datasets[0].data = dados2;
+    myChart2.update();
+
+}
+
 
     const data = {
         labels: labels,
         datasets: [{
             label: 'Pessoas por Zona',
-            data: [listaDadosZonas[0], listaDadosZonas[1], listaDadosZonas[2]],
+            data: dados,
             backgroundColor: '#1a3950',
             borderColor: '#a5efd3',
 
@@ -306,6 +332,7 @@ function PlotarGraficoBarra(){
         config
     );
 
+
     const labels2 = [
         'Livre',
         'Ocupado',
@@ -315,7 +342,7 @@ function PlotarGraficoBarra(){
         labels: labels2,
         datasets: [{
             label: 'Ocupação Atual do Shopping',
-            data: [parseInt(capacidadeLivre) ,parseInt(capacidadeOcupada)],
+            data: dados2,
             backgroundColor: [
                 'rgb(26, 57, 80, 0.5)',
                 'rgb(26, 57, 80)'
@@ -345,9 +372,6 @@ function PlotarGraficoBarra(){
         document.getElementById('myChart2'),
         config2
         );
-}
-
-
 
     // Gráfico de Pizza - refere-se a ocupação total do shopping
     //Sugestão de Kpi's = Porcentagem de Ocupação de Pessoas,Porcentagem Ocupação Livre de Pessoas e Total de Pessoas.
@@ -425,6 +449,30 @@ setInterval(()=>{
             else{
                 nomeAlarme.innerHTML = `Vermelho`
                 cardAlarme.style.backgroundColor = '#f96362'
+            }
+        }
+
+        function selecionarZona(){
+            dados = []
+            labels = []
+            if (select_zonas.value == 1) {
+                dados.push(listaDadosZonas[0])
+                labels.push(listaNomesZonas[0])
+                dados2 = [ (100 - (listaZonas[0].zonaPresenca / listaZonas[0].capacidade * 100)),(listaZonas[0].zonaPresenca / listaZonas[0].capacidade * 100)]
+            }
+            else if (select_zonas.value == 2) {
+                dados.push(listaDadosZonas[1])
+                labels.push(listaNomesZonas[1])
+                dados2 = [ (100 - (listaZonas[1].zonaPresenca / listaZonas[1].capacidade * 100)),(listaZonas[1].zonaPresenca / listaZonas[1].capacidade * 100)]
+            }
+            else if (select_zonas.value == 3) {
+                dados.push(listaDadosZonas[2])
+                labels.push(listaNomesZonas[2])
+                dados2 = [ (100 - (listaZonas[2].zonaPresenca / listaZonas[2].capacidade * 100)),(listaZonas[2].zonaPresenca / listaZonas[2].capacidade * 100)]
+            }else {
+                dados.push(listaDadosZonas[0],listaDadosZonas[1],listaDadosZonas[2])
+                labels.push(listaNomesZonas[0], listaNomesZonas[1], listaNomesZonas[2])
+                dados2 = [parseInt(capacidadeLivre) ,parseInt(capacidadeOcupada)]
             }
         }
         
