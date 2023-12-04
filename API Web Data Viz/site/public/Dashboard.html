@@ -93,9 +93,9 @@
                         <i class="Ω" id="i"></i>
                     </div>
                 </div>
-                <div class="card alarm" style="background-color:rgb(225, 214, 0);">
+                <div id="cardAlarme" class="card alarm" style="background-color:rgb(225, 214, 0);">
                     <div class="card-content1">
-                        <div class="number">Amarelo</div>
+                        <div id="nomeAlarme" class="number">Amarelo</div>
                         <div class="card-name">Alarme</div>
                     </div>
                     <div class="icon-box">
@@ -409,15 +409,22 @@ function PlotarGraficoBarra(){
             return false;
         }
         // atualizar o alarme
+        
+setInterval(()=>{
+    atualizarAlarme()
+}, 3000)
         function atualizarAlarme(){
-            if (condition) {
-                
+            if (capacidadeOcupada <= 70) {
+                nomeAlarme.innerHTML = `Verde`
+                cardAlarme.style.backgroundColor = '#98fb98'
             }
-            else if (condition) {
-                
+            else if (capacidadeOcupada <= 85) {
+                nomeAlarme.innerHTML = `Amarelo`
+                cardAlarme.style.backgroundColor = 'rgb(225, 214, 0)'
             }
             else{
-
+                nomeAlarme.innerHTML = `Vermelho`
+                cardAlarme.style.backgroundColor = '#f96362'
             }
         }
         
