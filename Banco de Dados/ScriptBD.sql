@@ -104,83 +104,37 @@ insert into dadosFluxo values
 (null, '2023-10-18 15:45:00', 0, 12),
 (null, '2023-10-18 14:00:00', 1, 13);
 
--- Select zonas dos shopping's
-select * from zona join shopping on fkShopping = idShopping;
 
--- Select todos os sensores por zona e shopping
-select sensor.idSensor,
-	   sensor.porta,
-	   z.nome as 'Zona',
-       s.nome as 'Shopping'
-       from sensor join zona as z on fkZona = idZona
-			join shopping as s on fkShopping = idShopping;
+      -- Total de presenças no shopping na última hora
+      select count(presenca) as presencaTotal from shopping as s  right join zona as z on idShopping = fkShopping
+	join sensor as se on idzona = fkZona
+    join dadosFluxo as df on idSensor = fkSensor
+	where presenca = 1 and fkShopping = 1 and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now()) and hour(horadia) >= hour(now()-1) ;
 
--- Select todos os sensores de um determinado andar de um determinado shopping
-select sensor.idSensor,
-	   sensor.porta,
-	   z.nome as 'Zona',
-       s.nome as 'Shopping'
-       from sensor join zona as z on fkZona = idZona
-			join shopping as s on fkShopping = idShopping
-		where z.nome like 'Zona 1%' and s.nome = 'Shopping ABC';
-
--- Select login
-select u.email, u.senha, s.nome from usuario as u 
-	join shopping as s
-    on fkShopping = idShopping;
-
--- Select informações do Shopping
-select nome, cnpj, cep, numero, email from shopping;
-
-select nome, cnpj, cep, numero, email from shopping
-	where nome like 'Shopping A%';
+-- Hora com maior quantidade de presenças
+select hour(df.horaDia) as hora, count(*) as quantidade from shopping as s join zona as z on idShopping = fkShopping
+	join sensor as se on idzona = fkZona
+    join dadosFluxo as df on idSensor = fkSensor
+    where presenca = 1 and idShopping = 1 and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now())
+    group by hora order by quantidade desc limit 1;
     
--- Selecionando zonas, "sensores" e seus respectivos valores e horários
-select s.nome as 'Shopping',
-	   z.nome as 'Zona', 
-       sensor.porta,
-       d.presenca, 			-- Funcao para formatar exibição de data
-       DATE_FORMAT(d.horaDia, '%d/%m/%Y %H:%i') AS 'Dia e hora' 
-	from shopping as s
-	join zona as z on fkShopping = idShopping
-    join sensor on fkZona = idZona
-    join dadosFluxo as d on fkSensor = idSensor;
+    -- Zona mais movimentada
+    select z.nome as zonaMaisMovimentada, count(presenca) as zonaPresenca from shopping as s join zona as z on idShopping = fkShopping 
+		join sensor as se on idzona = fkZona 	
+        join dadosFluxo as df on idSensor = fkSensor 
+        where presenca = 1 and fkShopping = 1 and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now())
+        group by z.nome
+        order by zonaPresenca
+        desc
+        limit 1;
+        
+        -- Quantidade de presenças em cada zona
+         select z.nome, count(presenca) as zonaPresenca, z.capacidade as capacidade from shopping as s join zona as z on idShopping = fkShopping 
+    join sensor as se on idzona = fkZona 	
+    join dadosFluxo as df on idSensor = fkSensor 
+    where presenca = 1 and fkShopping = 1 and year(horadia) = year(now()) and month(horadia) = month(now()) and day(horadia) = day(now()) and hour(horadia) >= hour(now()-1) 
+    group by z.nome, z.capacidade  order by z.nome;
     
--- Selecionando zonas e seus respectivos valores e horários de um determinado shopping
-select s.nome as 'Shopping',
-	   z.nome as 'Zona',
-       d.presenca,			-- Funcao para formatar exibição de data
-	    DATE_FORMAT(d.horaDia, '%d/%m/%Y %H:%i') AS 'Dia e hora' 
-	from shopping as s
-	join zona as z on fkShopping = idShopping
-    join sensor on fkZona = idZona
-    join dadosFluxo as d on fkSensor = idSensor
-    where s.nome like '%Aricanduva%';
-
--- Selecionando os valores e suas respectivas zona de um determinado shopping em um horário específico
-select s.nome as 'Shopping',
-	   z.nome as 'Zona',
-       d.presenca, 			-- Funcao para formatar exibição de data
-       DATE_FORMAT(d.horaDia, '%d/%m/%Y %H:%i') AS 'Dia e hora' 
-	from shopping as s
-	join zona as z on fkShopping = idShopping
-    join sensor on fkZona = idZona
-    join dadosFluxo as d on fkSensor = idSensor
-    where s.nome like '%Aricanduva%' and d.horaDia = '2023-10-18 15:30:00';
-
--- Select com todas as informações dos dados, zona, shopping e seus respectivos administradores
-select s.nome as 'Shopping',
-	   z.nome as 'Zona', 
-       sensor.porta,
-       d.presenca, 			-- Funcao para formatar exibição de data
-       DATE_FORMAT(d.horaDia, '%d/%m/%Y %H:%i') AS 'Dia e hora',
-       u.idUsuario,
-      u.nome,
-      u.tipoUsuario
-
-	from shopping as s
-	join zona as z on fkShopping = idShopping
-    join sensor on fkZona = idZona
-    join dadosFluxo as d on fkSensor = idSensor
-      right join usuario as u on u.fkShopping = s.idShopping where u.tipoUsuario = 'admin';
+    -- Capacidade total do shopping
+    select sum(capacidade) capacidadeTotal from zona join shopping on fkShopping = idShopping where idShopping = 1;
 
