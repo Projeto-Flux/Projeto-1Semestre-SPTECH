@@ -151,6 +151,7 @@ body {
 .text-column-left {
     padding-left: 100px;
     color: #fff;
+    width: 50%;
 }
 
 
@@ -167,7 +168,7 @@ body {
 
 .banner .text-column-left h3 {
     margin: 5px 0;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 700;
     text-transform: uppercase;
     max-width: 600px;
@@ -182,13 +183,15 @@ body {
     margin: 5px 0;
     text-align: justify;
     color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 .banner .button {
     display: inline-block;
-    font: 1em;
+    font-size: 1.4em;
     background: rgb(0, 0, 0, 0.01);
-    padding: 10px 30px;
+    padding: 10px 100px;
     transition: 0.4s;
     align-self: center;
 }
@@ -221,6 +224,7 @@ body {
     margin-bottom: 50px;
     text-transform: uppercase;
     color: #ffffff;
+    font-size: 12px;
 }
 
 #projeto {
@@ -274,6 +278,7 @@ body {
     text-align: justify;
     align-items: center;
     color: #fff;
+    font-size: 20px;
 }
 
 .titulo h1 {
@@ -319,8 +324,7 @@ span {
     cursor: pointer;
     background: transparent;
     transition: transform 1s;
-    background: 0.5s;
-    
+    background: 0.5s;    
 }
 
 
@@ -348,7 +352,7 @@ span {
 }
 
 .card p {
-    font-size: 12px;
+    font-size: 18px;
     margin-bottom: 30px;
     line-height: 1.5;
     color: #ffffff;
@@ -356,7 +360,7 @@ span {
 }
 
 .button {
-    font-size: 15px;
+    font-size: 12px;
     text-decoration: none;
     color: #fff;
     padding: 8px 12px;
@@ -415,6 +419,7 @@ span {
     align-content: center;
     text-align: justify;
     justify-content: space-evenly;
+    font-size: 20px;
 }
 
 .footer {
