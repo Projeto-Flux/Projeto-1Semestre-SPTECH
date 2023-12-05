@@ -193,6 +193,11 @@ body {
     color: #1a3950;
 }
 
+.usuarioColor {
+    background-color: gray;
+    cursor: no-drop;
+}
+
 /* ===================================GRÁFICOS======================================== */
 
 .charts {
