@@ -48,32 +48,20 @@
                 </li>
                 <li>
                     <a href="#">
-                        <i class="fas fa-chalkboard-teacher" id="i"></i>
-                        <div>Estatísticas</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-users" id="i"></i>
-                        <div>Analytics</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-hand-holding-usd" id="i"></i>
-                        <div>Relatório</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
                         <i class="fas fa-cog" id="i"></i>
                         <div>Configurações</div>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="Projeto-1Semestre-SPTECH\Tecnologia da Informação\Manual de Instalação dos Sensores.pdf" download="Manual de Instalação dos Sensores.pdf">
                         <i class="fas fa-question" id="i"></i>
-                        <div>Ajuda</div>
+                        <div>Download Manual</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="funcaoSair()">
+                        <i class="fas fa-hand-holding-usd" id="i"></i>
+                        <div>Sair</div>
                     </a>
                 </li>
             </ul>
@@ -86,7 +74,7 @@
                         <div class="card-name">Presenças na última hora</div>
                     </div>
                     <div class="icon-box">
-                        <i class="fas fa-user-graduate" id="i"></i>
+                        <i class="fa-solid fa-person" id="i"></i>
                     </div>
                 </div>
                 <div class="card">
@@ -476,6 +464,11 @@ setInterval(()=>{
             }
         }
         
+
+        function funcaoSair() {
+            sessionStorage.clear
+            window.location.href = "index.html"
+        }
 </script>
 
 <script type="text/javascript">
