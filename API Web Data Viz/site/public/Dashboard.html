@@ -266,7 +266,7 @@ function PlotarGraficoBarra(){
     if(!verifica){
         dados.push(listaDadosZonas[0], listaDadosZonas[1], listaDadosZonas[2])
         labels = [listaNomesZonas[0],listaNomesZonas[1],listaNomesZonas[2]]
-        dados2.push(capacidadeOcupada, capacidadeLivre)
+        dados2.push(capacidadeLivre, capacidadeOcupada)
         verifica = true
     }
 
@@ -278,6 +278,7 @@ function PlotarGraficoBarra(){
     myChart2.data.datasets[0].data = dados2;
     myChart2.update();
 
+    selecionarZona()
 }
 
 
